@@ -1,0 +1,13 @@
+/**
+ * 通过边界解码高效获取指定图片文件的宽高尺寸（不会加载完整图片像素数据）
+ *
+ * <p>使用 {@link android.util.Size} 封装图片的宽度和高度信息，适用于图片加载前的尺寸预判场景（如计算缩放比例）</p>
+ *
+ * @param imagePath 待获取尺寸的图片文件路径（支持本地文件系统路径，如 SD 卡或内部存储路径）
+ * @return 封装图片宽度和高度的 {@link android.util.Size} 实例，宽高值为像素单位
+ * @throws IllegalArgumentException 当图片路径为空或格式不合法时抛出
+ * @throws SecurityException 当应用缺乏文件读取权限时抛出
+ * @throws OutOfMemoryError 极端情况下解码边界信息时内存不足（需配合内存优化策略使用）
+ */
+//fun getSize(imagePath: String): Size
+$console.log($images.getSize("/sdcard/M8Test/opencv/super_mario.jpg"));

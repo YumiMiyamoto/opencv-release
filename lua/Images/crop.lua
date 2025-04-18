@@ -1,0 +1,15 @@
+--[[
+/**
+ * 将 [srcPath] 裁剪一个矩形区域保存到 [outputPath] 中
+ *
+ * @param srcPath 原始图片路径
+ * @param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件
+ * @param regionBuilder 构建矩形的函数
+ * @receiver 待构建的矩形对象
+ */
+]]
+--fun crop(srcPath: String, outputPath: String, regionBuilder: Rect.() -> Unit)
+-- 截取 /sdcard/M8Test/opencv/super_mario.jpg 左上角 (100,100) 到右下角 (300, 200) 矩形区域的保存到 /sdcard/M8Test/opencv/crop_mario.jpg
+_images:crop("/sdcard/M8Test/opencv/super_mario.jpg", "/sdcard/M8Test/opencv/crop_mario.jpg", function(it)
+    it:set(100, 100, 300, 200)
+end)

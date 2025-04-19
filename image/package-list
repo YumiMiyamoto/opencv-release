@@ -1,0 +1,36 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.m8test.image.api////PointingToDeclaration/image/com.m8test.image.api/index.html
+$dokka.location:com.m8test.image.api/Colors///PointingToDeclaration/image/com.m8test.image.api/-colors/index.html
+$dokka.location:com.m8test.image.api/Colors/getColorHex/#kotlin.String#kotlin.Int#kotlin.Int/PointingToDeclaration/image/com.m8test.image.api/-colors/get-color-hex.html
+$dokka.location:com.m8test.image.api/Colors/getColorHexInScreen/#kotlin.Int#kotlin.Int/PointingToDeclaration/image/com.m8test.image.api/-colors/get-color-hex-in-screen.html
+$dokka.location:com.m8test.image.api/Colors/getSimilarity/#kotlin.String#kotlin.String#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-colors/get-similarity.html
+$dokka.location:com.m8test.image.api/Colors/isSimilar/#kotlin.String#kotlin.String#kotlin.Int?#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-colors/is-similar.html
+$dokka.location:com.m8test.image.api/CoordinateResult///PointingToDeclaration/image/com.m8test.image.api/-coordinate-result/index.html
+$dokka.location:com.m8test.image.api/CoordinateResult/getCoordinate/#/PointingToDeclaration/image/com.m8test.image.api/-coordinate-result/get-coordinate.html
+$dokka.location:com.m8test.image.api/Images///PointingToDeclaration/image/com.m8test.image.api/-images/index.html
+$dokka.location:com.m8test.image.api/Images/captureScreen/#kotlin.String/PointingToDeclaration/image/com.m8test.image.api/-images/capture-screen.html
+$dokka.location:com.m8test.image.api/Images/compareColors/#kotlin.String#kotlin.String#kotlin.Int#kotlin.Int#kotlin.Int?#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?#kotlin.String?#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-images/compare-colors.html
+$dokka.location:com.m8test.image.api/Images/compareColorsInScreen/#kotlin.String#kotlin.Int#kotlin.Int#kotlin.Int?#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?#kotlin.String?#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-images/compare-colors-in-screen.html
+$dokka.location:com.m8test.image.api/Images/crop/#kotlin.String#kotlin.String#kotlin.Function1[android.graphics.Rect,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/crop.html
+$dokka.location:com.m8test.image.api/Images/cropInScreen/#kotlin.String#kotlin.Function1[android.graphics.Rect,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/crop-in-screen.html
+$dokka.location:com.m8test.image.api/Images/findColors/#kotlin.String#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?#kotlin.String?#kotlin.String?#kotlin.Int?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-images/find-colors.html
+$dokka.location:com.m8test.image.api/Images/findColorsInScreen/#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?#kotlin.String?#kotlin.String?#kotlin.Int?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-images/find-colors-in-screen.html
+$dokka.location:com.m8test.image.api/Images/getSize/#kotlin.String/PointingToDeclaration/image/com.m8test.image.api/-images/get-size.html
+$dokka.location:com.m8test.image.api/Images/matchTemplates/#kotlin.String#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?#kotlin.String?#kotlin.Int?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-images/match-templates.html
+$dokka.location:com.m8test.image.api/Images/matchTemplatesInScreen/#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?#kotlin.String?#kotlin.Int?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-images/match-templates-in-screen.html
+$dokka.location:com.m8test.image.api/RegionResult///PointingToDeclaration/image/com.m8test.image.api/-region-result/index.html
+$dokka.location:com.m8test.image.api/RegionResult/getRegion/#/PointingToDeclaration/image/com.m8test.image.api/-region-result/get-region.html
+$dokka.location:com.m8test.image.api/Result///PointingToDeclaration/image/com.m8test.image.api/-result/index.html
+$dokka.location:com.m8test.image.api/Result/getSimilarity/#/PointingToDeclaration/image/com.m8test.image.api/-result/get-similarity.html
+$dokka.location:com.m8test.image.api/Results///PointingToDeclaration/image/com.m8test.image.api/-results/index.html
+$dokka.location:com.m8test.image.api/Results/getAll/#/PointingToDeclaration/image/com.m8test.image.api/-results/get-all.html
+$dokka.location:com.m8test.image.api/Results/getBest/#/PointingToDeclaration/image/com.m8test.image.api/-results/get-best.html
+$dokka.location:com.m8test.opencv.impl////PointingToDeclaration/image/com.m8test.opencv.impl.html
+$dokka.location:com.m8test.opencv////PointingToDeclaration/image/com.m8test.opencv/index.html
+$dokka.location:com.m8test.opencv/OpencvComponent///PointingToDeclaration/image/com.m8test.opencv/-opencv-component/index.html
+$dokka.location:com.m8test.opencv/OpencvComponent/OpencvComponent/#com.m8test.plugin.api.ApkPluginProvider/PointingToDeclaration/image/com.m8test.opencv/-opencv-component/-opencv-component.html
+$dokka.location:com.m8test.opencv/OpencvComponent/getVariables/#com.m8test.script.core.api.engine.ScriptContext/PointingToDeclaration/image/com.m8test.opencv/-opencv-component/get-variables.html
+com.m8test.image.api
+com.m8test.opencv
+com.m8test.opencv.impl

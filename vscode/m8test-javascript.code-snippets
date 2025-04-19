@@ -1,0 +1,302 @@
+{
+  "Colors.getColorHex(kotlin.String, kotlin.Int, kotlin.Int)": {
+    "prefix": "Colors.getColorHex(kotlin.String, kotlin.Int, kotlin.Int)",
+    "body": "\\$colors.getColorHex(${1:image}, ${2:x}, ${3:y}$0)",
+    "description": "获取 image 中的坐标 (x,y) 的颜色16进制\n\n@param image 需要获取颜色的图片路径\n@param x 颜色x坐标\n@param y 颜色y坐标\n@return image 中的坐标 (x,y) 的颜色16进制，格式为 \"#RRGGBB\" 或 \"#AARRGGBB\"（如果包含透明度）",
+    "scope": "javascript"
+  },
+  "Colors.getColorHexInScreen(kotlin.Int, kotlin.Int)": {
+    "prefix": "Colors.getColorHexInScreen(kotlin.Int, kotlin.Int)",
+    "body": "\\$colors.getColorHexInScreen(${1:x}, ${2:y}$0)",
+    "description": "获取屏幕中的坐标 (x,y) 的颜色16进制, 会自动申请屏幕截图权限\n\n@param x 颜色x坐标\n@param y 颜色y坐标\n@return 屏幕中的坐标 (x,y) 的颜色16进制，格式为 \"#RRGGBB\" 或 \"#AARRGGBB\"（如果包含透明度）",
+    "scope": "javascript"
+  },
+  "Colors.isSimilar(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean)": {
+    "prefix": "Colors.isSimilar(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean)",
+    "body": "\\$colors.isSimilar(${1:color1}, ${2:color2}, ${3:similarity}, ${4:algorithm}, ${5:ignoreAlpha}$0)",
+    "description": "判断 color1 和 color2 是否相似。\n\n@param color1 需要比较的颜色1，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。\n@param color2 需要比较的颜色2，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。\n@param similarity 颜色相似度，范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。\n@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。\n@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。\n@return 如果两个颜色相似返回true，否则返回false",
+    "scope": "javascript"
+  },
+  "Colors.getSimilarity(kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)": {
+    "prefix": "Colors.getSimilarity(kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)",
+    "body": "\\$colors.getSimilarity(${1:color1}, ${2:color2}, ${3:algorithm}, ${4:ignoreAlpha}$0)",
+    "description": "判断 color1 和 color2 是否相似。\n\n@param color1 需要比较的颜色1，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。\n@param color2 需要比较的颜色2，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。\n@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。\n@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。\n@return 颜色相似度，范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。",
+    "scope": "javascript"
+  },
+  "Colors.getGlobalName()": {
+    "prefix": "Colors.getGlobalName()",
+    "body": "\\$colors.getGlobalName($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "Colors.getPublicType()": {
+    "prefix": "Colors.getPublicType()",
+    "body": "\\$colors.getPublicType($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "Colors.isPrefixRequired()": {
+    "prefix": "Colors.isPrefixRequired()",
+    "body": "\\$colors.isPrefixRequired($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "Colors.isSuffixRequired()": {
+    "prefix": "Colors.isSuffixRequired()",
+    "body": "\\$colors.isSuffixRequired($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "M8TestCoordinateResult.M8TestCoordinateResult.getCoordinate()": {
+    "prefix": ".M8TestCoordinateResult.getCoordinate()",
+    "body": ".getCoordinate($0)",
+    "description": "CoordinateResult.getCoordinate\n获取坐标\n\n@return 坐标",
+    "scope": "javascript"
+  },
+  "M8TestCoordinateResult.M8TestCoordinateResult.getSimilarity()": {
+    "prefix": ".M8TestCoordinateResult.getSimilarity()",
+    "body": ".getSimilarity($0)",
+    "description": "CoordinateResult.getSimilarity\n获取匹配结果的相似度\n\n@return 匹配结果的相似度",
+    "scope": "javascript"
+  },
+  "Images.captureScreen(kotlin.String)": {
+    "prefix": "Images.captureScreen(kotlin.String)",
+    "body": "\\$images.captureScreen(${1:outputPath}$0)",
+    "description": "将屏幕截图保存到 outputPath 中\n\n@param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件",
+    "scope": "javascript"
+  },
+  "Images.crop(kotlin.String, kotlin.String, kotlin.Function1)": {
+    "prefix": "Images.crop(kotlin.String, kotlin.String, kotlin.Function1)",
+    "body": "\\$images.crop(${1:srcPath}, ${2:outputPath}, ${5:(${3:v1}) \u003d\u003e { $4\\}}$0)",
+    "description": "将 srcPath 裁剪一个矩形区域保存到 outputPath 中\n\n@param srcPath 原始图片路径\n@param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件\n@param regionBuilder 构建矩形的函数Receiver(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d待构建的矩形对象, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE))",
+    "scope": "javascript"
+  },
+  "Images.cropInScreen(kotlin.String, kotlin.Function1)": {
+    "prefix": "Images.cropInScreen(kotlin.String, kotlin.Function1)",
+    "body": "\\$images.cropInScreen(${1:outputPath}, ${4:(${2:v1}) \u003d\u003e { $3\\}}$0)",
+    "description": "将屏幕裁剪一个矩形区域保存到 outputPath 中, 会自动申请屏幕截图权限\n\n@param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件\n@param regionBuilder 构建矩形的函数Receiver(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d待构建的矩形对象, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE))",
+    "scope": "javascript"
+  },
+  "Images.matchTemplates(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.Int, kotlin.Boolean)": {
+    "prefix": "Images.matchTemplates(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.Int, kotlin.Boolean)",
+    "body": "\\$images.matchTemplates(${1:srcPath}, ${2:templatePath}, ${3:similarity}, ${4:limit}, ${7:(${5:v1}) \u003d\u003e { $6\\}}, ${8:outputPath}, ${9:method}, ${10:parallel}$0)",
+    "description": "从文件路径读取图像进行模板匹配（多目标）, 也就是从 srcPath 查找 templatePath。\n\n@param srcPath 原图像文件路径, 大图\n@param templatePath 模板图像文件路径, 小图\n@param similarity 匹配相似度，必须在 0, 100 范围内\n@param regionBuilder 限定仅在原图像的该区域内查找\n@param outputPath 匹配结果图像输出路径\n@param method 模板匹配方法\n@param parallel 是否启用并行处理\n@return 匹配到的所有结果（按相似度降序），包含匹配区域和相似度Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d如果 similarity 无效或文件路径无效, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.matchTemplatesInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.Int, kotlin.Boolean)": {
+    "prefix": "Images.matchTemplatesInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.Int, kotlin.Boolean)",
+    "body": "\\$images.matchTemplatesInScreen(${1:templatePath}, ${2:similarity}, ${3:limit}, ${6:(${4:v1}) \u003d\u003e { $5\\}}, ${7:outputPath}, ${8:method}, ${9:parallel}$0)",
+    "description": "从屏幕中查找 templatePath, 会自动申请屏幕截图权限\n\n@param templatePath 模板图像文件路径, 小图\n@param similarity 匹配相似度，必须在 0, 100 范围内\n@param regionBuilder 限定仅在原图像的该区域内查找\n@param outputPath 匹配结果图像输出路径\n@param method 模板匹配方法\n@param parallel 是否启用并行处理\n@return 匹配到的所有结果（按相似度降序），包含匹配区域和相似度Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d如果 similarity 无效或文件路径无效, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.compareColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Boolean)": {
+    "prefix": "Images.compareColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Boolean)",
+    "body": "\\$images.compareColors(${1:imagePath}, ${2:firstColor}, ${3:x}, ${4:y}, ${5:similarity}, ${8:(${6:v1}) \u003d\u003e { $7\\}}, ${9:colors}, ${10:algorithm}, ${11:ignoreAlpha}$0)",
+    "description": "比较imagePath图片指定坐标的颜色是否与目标颜色匹配，或比较主坐标及其偏移点的颜色是否匹配。\n如果 colors 为 null 或空，则仅比较指定坐标 (x, y) 的颜色是否与 firstColor 匹配。 如果 colors 不为空，则解析颜色偏移字符串，比较主坐标及其偏移点的颜色是否匹配，使用每个偏移点的 similarity。\n\n@param imagePath 输入图像的文件路径。\n@param firstColor 目标颜色（或主颜色），支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。\n@param x 主坐标的横坐标。\n@param y 主坐标的纵坐标。\n@param similarity 颜色相似度（仅用于主颜色），范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。\n@param regionBuilder 可选参数，指定查找区域（默认全图）。\n@param colors 颜色偏移字符串，格式如 \"6|1|0x969696|90,1|12|0xee969696|95,-4|0|#969696\"（可选）。\n@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。\n@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。\n@return 是否所有坐标的颜色都匹配，true 表示匹配，false 表示不匹配。Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d如果 imagePath 无效、similarity 超出范围、algorithm 无效或颜色格式错误。, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.compareColorsInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Boolean)": {
+    "prefix": "Images.compareColorsInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Boolean)",
+    "body": "\\$images.compareColorsInScreen(${1:firstColor}, ${2:x}, ${3:y}, ${4:similarity}, ${7:(${5:v1}) \u003d\u003e { $6\\}}, ${8:colors}, ${9:algorithm}, ${10:ignoreAlpha}$0)",
+    "description": "比较屏幕中指定坐标的颜色是否与目标颜色匹配，或比较主坐标及其偏移点的颜色是否匹配, 会自动申请屏幕截图权限。\n如果 colors 为 null 或空，则仅比较指定坐标 (x, y) 的颜色是否与 firstColor 匹配。 如果 colors 不为空，则解析颜色偏移字符串，比较主坐标及其偏移点的颜色是否匹配，使用每个偏移点的 similarity。\n\n@param firstColor 目标颜色（或主颜色），支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。\n@param x 主坐标的横坐标。\n@param y 主坐标的纵坐标。\n@param similarity 颜色相似度（仅用于主颜色），范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。\n@param regionBuilder 可选参数，指定查找区域（默认全图）。\n@param colors 颜色偏移字符串，格式如 \"6|1|0x969696|90,1|12|0xee969696|95,-4|0|#969696\"（可选）。\n@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。\n@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。\n@return 是否所有坐标的颜色都匹配，true 表示匹配，false 表示不匹配。Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d如果 imagePath 无效、similarity 超出范围、algorithm 无效或颜色格式错误。, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.findColorsInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean)": {
+    "prefix": "Images.findColorsInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean)",
+    "body": "\\$images.findColorsInScreen(${1:firstColor}, ${2:similarity}, ${3:limit}, ${6:(${4:v1}) \u003d\u003e { $5\\}}, ${7:colors}, ${8:algorithm}, ${9:direction}, ${10:ignoreAlpha}$0)",
+    "description": "查找屏幕中中匹配的颜色点集合, 会自动申请屏幕截图权限\n如果 colors 为空，查找匹配主颜色的点；否则查找匹配主颜色及其偏移颜色的点，最多返回 limit 个。\n\n@param firstColor 目标主颜色，支持格式：0x969696、#969696、969696（RGB）或 0xee969696（ARGB）\n@param similarity 主颜色的相似度，范围 0, 100\n@param limit 最大返回的匹配点数量\n@param regionBuilder 查找区域构建函数\n@param colors 颜色偏移字符串，格式如 \"6|1|0x969696|90,1|12|0xee969696|95\"\n@param algorithm 匹配算法，支持：equal、diff、rgb、rgb+、hs\n@param direction 搜索方向\n@param ignoreAlpha 是否忽略透明度比较\n@return 匹配的坐标点及其相似度的集合Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d如果参数无效, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.findColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean)": {
+    "prefix": "Images.findColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean)",
+    "body": "\\$images.findColors(${1:imagePath}, ${2:firstColor}, ${3:similarity}, ${4:limit}, ${7:(${5:v1}) \u003d\u003e { $6\\}}, ${8:colors}, ${9:algorithm}, ${10:direction}, ${11:ignoreAlpha}$0)",
+    "description": "查找图像中匹配的颜色点集合\n如果 colors 为空，查找匹配主颜色的点；否则查找匹配主颜色及其偏移颜色的点，最多返回 limit 个。\n\n@param imagePath 输入图像文件路径\n@param firstColor 目标主颜色，支持格式：0x969696、#969696、969696（RGB）或 0xee969696（ARGB）\n@param similarity 主颜色的相似度，范围 0, 100\n@param limit 最大返回的匹配点数量\n@param regionBuilder 查找区域构建函数\n@param colors 颜色偏移字符串，格式如 \"6|1|0x969696|90,1|12|0xee969696|95\"\n@param algorithm 匹配算法，支持：equal、diff、rgb、rgb+、hs\n@param direction 搜索方向\n@param ignoreAlpha 是否忽略透明度比较\n@return 匹配的坐标点及其相似度的集合Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d如果参数无效, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.getSize(kotlin.String)": {
+    "prefix": "Images.getSize(kotlin.String)",
+    "body": "\\$images.getSize(${1:imagePath}$0)",
+    "description": "通过边界解码高效获取指定图片文件的宽高尺寸（不会加载完整图片像素数据）\n\u003cp\u003e使用 {@link android.util.Size} 封装图片的宽度和高度信息，适用于图片加载前的尺寸预判场景（如计算缩放比例）\u003c/p\u003e\n\n@param imagePath 待获取尺寸的图片文件路径（支持本地文件系统路径，如 SD 卡或内部存储路径）\n@return 封装图片宽度和高度的 {@link android.util.Size} 实例，宽高值为像素单位Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当图片路径为空或格式不合法时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当应用缺乏文件读取权限时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d极端情况下解码边界信息时内存不足（需配合内存优化策略使用）, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.OutOfMemoryError, exceptionAddress\u003djava.lang/OutOfMemoryError///PointingToDeclaration/)",
+    "scope": "javascript"
+  },
+  "Images.getGlobalName()": {
+    "prefix": "Images.getGlobalName()",
+    "body": "\\$images.getGlobalName($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "Images.getPublicType()": {
+    "prefix": "Images.getPublicType()",
+    "body": "\\$images.getPublicType($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "Images.isPrefixRequired()": {
+    "prefix": "Images.isPrefixRequired()",
+    "body": "\\$images.isPrefixRequired($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "Images.isSuffixRequired()": {
+    "prefix": "Images.isSuffixRequired()",
+    "body": "\\$images.isSuffixRequired($0)",
+    "description": "",
+    "scope": "javascript"
+  },
+  "M8TestRegionResult.M8TestRegionResult.getRegion()": {
+    "prefix": ".M8TestRegionResult.getRegion()",
+    "body": ".getRegion($0)",
+    "description": "RegionResult.getRegion\n获取匹配结果的区域\n\n@return 匹配结果的区域",
+    "scope": "javascript"
+  },
+  "M8TestRegionResult.M8TestRegionResult.getSimilarity()": {
+    "prefix": ".M8TestRegionResult.getSimilarity()",
+    "body": ".getSimilarity($0)",
+    "description": "RegionResult.getSimilarity\n获取匹配结果的相似度\n\n@return 匹配结果的相似度",
+    "scope": "javascript"
+  },
+  "M8TestResult.M8TestResult.getSimilarity()": {
+    "prefix": ".M8TestResult.getSimilarity()",
+    "body": ".getSimilarity($0)",
+    "description": "Result.getSimilarity\n获取匹配结果的相似度\n\n@return 匹配结果的相似度",
+    "scope": "javascript"
+  },
+  "M8TestResults.M8TestResults.getAll()": {
+    "prefix": ".M8TestResults.getAll()",
+    "body": ".getAll($0)",
+    "description": "Results.getAll\n获取集合中的所有结果.\n\n@return 集合中的所有结果",
+    "scope": "javascript"
+  },
+  "M8TestResults.M8TestResults.getBest()": {
+    "prefix": ".M8TestResults.getBest()",
+    "body": ".getBest($0)",
+    "description": "Results.getBest\n获取相似度最高的匹配结果\n\n@return 相似度最高的匹配结果",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getVariables(com.m8test.script.core.api.engine.ScriptContext)": {
+    "prefix": ".M8TestOpencvComponent.getVariables(com.m8test.script.core.api.engine.ScriptContext)",
+    "body": ".getVariables(${1:scriptContext}$0)",
+    "description": "OpencvComponent.getVariables\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.addClassLoader(dalvik.system.BaseDexClassLoader)": {
+    "prefix": ".M8TestOpencvComponent.addClassLoader(dalvik.system.BaseDexClassLoader)",
+    "body": ".addClassLoader(${1:classLoader}$0)",
+    "description": "OpencvComponent.addClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.addClassLoader(kotlin.Function1)": {
+    "prefix": ".M8TestOpencvComponent.addClassLoader(kotlin.Function1)",
+    "body": ".addClassLoader(${3:(${1:v1}) \u003d\u003e { $2\\}}$0)",
+    "description": "OpencvComponent.addClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.addDependency(kotlin.Function1)": {
+    "prefix": ".M8TestOpencvComponent.addDependency(kotlin.Function1)",
+    "body": ".addDependency(${3:(${1:v1}) \u003d\u003e { $2\\}}$0)",
+    "description": "OpencvComponent.addDependency\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.configureClassLoader(kotlin.Function1)": {
+    "prefix": ".M8TestOpencvComponent.configureClassLoader(kotlin.Function1)",
+    "body": ".configureClassLoader(${3:(${1:v1}) \u003d\u003e { $2\\}}$0)",
+    "description": "OpencvComponent.configureClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.configureClassLoader(dalvik.system.BaseDexClassLoader, kotlin.Function1)": {
+    "prefix": ".M8TestOpencvComponent.configureClassLoader(dalvik.system.BaseDexClassLoader, kotlin.Function1)",
+    "body": ".configureClassLoader(${1:dexClassLoader}, ${4:(${2:v1}) \u003d\u003e { $3\\}}$0)",
+    "description": "OpencvComponent.configureClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.createClassLoader(kotlin.Function1)": {
+    "prefix": ".M8TestOpencvComponent.createClassLoader(kotlin.Function1)",
+    "body": ".createClassLoader(${3:(${1:v1}) \u003d\u003e { $2\\}}$0)",
+    "description": "OpencvComponent.createClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getApplication()": {
+    "prefix": ".M8TestOpencvComponent.getApplication()",
+    "body": ".getApplication($0)",
+    "description": "OpencvComponent.getApplication\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getClassLoader()": {
+    "prefix": ".M8TestOpencvComponent.getClassLoader()",
+    "body": ".getClassLoader($0)",
+    "description": "OpencvComponent.getClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getClassLoaders()": {
+    "prefix": ".M8TestOpencvComponent.getClassLoaders()",
+    "body": ".getClassLoaders($0)",
+    "description": "OpencvComponent.getClassLoaders\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getFilesDir()": {
+    "prefix": ".M8TestOpencvComponent.getFilesDir()",
+    "body": ".getFilesDir($0)",
+    "description": "OpencvComponent.getFilesDir\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getName()": {
+    "prefix": ".M8TestOpencvComponent.getName()",
+    "body": ".getName($0)",
+    "description": "OpencvComponent.getName\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getPackageInfo()": {
+    "prefix": ".M8TestOpencvComponent.getPackageInfo()",
+    "body": ".getPackageInfo($0)",
+    "description": "OpencvComponent.getPackageInfo\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getPluginInfo()": {
+    "prefix": ".M8TestOpencvComponent.getPluginInfo()",
+    "body": ".getPluginInfo($0)",
+    "description": "OpencvComponent.getPluginInfo\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getResources()": {
+    "prefix": ".M8TestOpencvComponent.getResources()",
+    "body": ".getResources($0)",
+    "description": "OpencvComponent.getResources\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getSettings()": {
+    "prefix": ".M8TestOpencvComponent.getSettings()",
+    "body": ".getSettings($0)",
+    "description": "OpencvComponent.getSettings\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.loadClass(kotlin.String)": {
+    "prefix": ".M8TestOpencvComponent.loadClass(kotlin.String)",
+    "body": ".loadClass(${1:className}$0)",
+    "description": "OpencvComponent.loadClass\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.registerUICreator(com.m8test.script.core.api.ui.UICreator)": {
+    "prefix": ".M8TestOpencvComponent.registerUICreator(com.m8test.script.core.api.ui.UICreator)",
+    "body": ".registerUICreator(${1:uiCreator}$0)",
+    "description": "OpencvComponent.registerUICreator\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.removeClassLoader(dalvik.system.BaseDexClassLoader)": {
+    "prefix": ".M8TestOpencvComponent.removeClassLoader(dalvik.system.BaseDexClassLoader)",
+    "body": ".removeClassLoader(${1:classLoader}$0)",
+    "description": "OpencvComponent.removeClassLoader\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.removeDependency(kotlin.Function1)": {
+    "prefix": ".M8TestOpencvComponent.removeDependency(kotlin.Function1)",
+    "body": ".removeDependency(${3:(${1:v1}) \u003d\u003e { $2\\}}$0)",
+    "description": "OpencvComponent.removeDependency\n",
+    "scope": "javascript"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.unregisterUICreator(com.m8test.script.core.api.ui.UICreator)": {
+    "prefix": ".M8TestOpencvComponent.unregisterUICreator(com.m8test.script.core.api.ui.UICreator)",
+    "body": ".unregisterUICreator(${1:uiCreator}$0)",
+    "description": "OpencvComponent.unregisterUICreator\n",
+    "scope": "javascript"
+  }
+}

@@ -1,0 +1,363 @@
+<templateSet group="M8Test-php">
+	<template name="Colors-&gt;getColorHex(kotlin.String, kotlin.Int, kotlin.Int);" value="$colors-&gt;getColorHex($image$, $x$, $y$);" description="获取 image 中的坐标 (x,y) 的颜色16进制&#10;&#10;@param image 需要获取颜色的图片路径&#10;@param x 颜色x坐标&#10;@param y 颜色y坐标&#10;@return image 中的坐标 (x,y) 的颜色16进制，格式为 \&quot;#RRGGBB\&quot; 或 \&quot;#AARRGGBB\&quot;（如果包含透明度）" toReformat="false" toShortenFQNames="true">
+		<variable name="image" expression="" defaultValue="&quot;image&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;getColorHexInScreen(kotlin.Int, kotlin.Int);" value="$colors-&gt;getColorHexInScreen($x$, $y$);" description="获取屏幕中的坐标 (x,y) 的颜色16进制, 会自动申请屏幕截图权限&#10;&#10;@param x 颜色x坐标&#10;@param y 颜色y坐标&#10;@return 屏幕中的坐标 (x,y) 的颜色16进制，格式为 \&quot;#RRGGBB\&quot; 或 \&quot;#AARRGGBB\&quot;（如果包含透明度）" toReformat="false" toShortenFQNames="true">
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;isSimilar(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean);" value="$colors-&gt;isSimilar($color1$, $color2$, $similarity$, $algorithm$, $ignoreAlpha$);" description="判断 color1 和 color2 是否相似。&#10;&#10;@param color1 需要比较的颜色1，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。&#10;@param color2 需要比较的颜色2，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。&#10;@param similarity 颜色相似度，范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。&#10;@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。&#10;@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。&#10;@return 如果两个颜色相似返回true，否则返回false" toReformat="false" toShortenFQNames="true">
+		<variable name="color1" expression="" defaultValue="&quot;color1&quot;" alwaysStopAt="true"/>
+		<variable name="color2" expression="" defaultValue="&quot;color2&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;getSimilarity(kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean);" value="$colors-&gt;getSimilarity($color1$, $color2$, $algorithm$, $ignoreAlpha$);" description="判断 color1 和 color2 是否相似。&#10;&#10;@param color1 需要比较的颜色1，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。&#10;@param color2 需要比较的颜色2，支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。&#10;@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。&#10;@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。&#10;@return 颜色相似度，范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。" toReformat="false" toShortenFQNames="true">
+		<variable name="color1" expression="" defaultValue="&quot;color1&quot;" alwaysStopAt="true"/>
+		<variable name="color2" expression="" defaultValue="&quot;color2&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;getGlobalName();" value="$colors-&gt;getGlobalName();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;getPublicType();" value="$colors-&gt;getPublicType();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;isPrefixRequired();" value="$colors-&gt;isPrefixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Colors-&gt;isSuffixRequired();" value="$colors-&gt;isSuffixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCoordinateResult-&gt;getCoordinate();" value="-&gt;getCoordinate();" description="CoordinateResult-&gt;getCoordinate&#10;获取坐标&#10;&#10;@return 坐标" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCoordinateResult-&gt;getSimilarity();" value="-&gt;getSimilarity();" description="CoordinateResult-&gt;getSimilarity&#10;获取匹配结果的相似度&#10;&#10;@return 匹配结果的相似度" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;captureScreen(kotlin.String);" value="$images-&gt;captureScreen($outputPath$);" description="将屏幕截图保存到 outputPath 中&#10;&#10;@param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件" toReformat="false" toShortenFQNames="true">
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;crop(kotlin.String, kotlin.String, kotlin.Function1);" value="$images-&gt;crop($srcPath$, $outputPath$, $regionBuilder$);" description="将 srcPath 裁剪一个矩形区域保存到 outputPath 中&#10;&#10;@param srcPath 原始图片路径&#10;@param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件&#10;@param regionBuilder 构建矩形的函数Receiver(root=CustomDocTag(children=[P(children=[Text(body=待构建的矩形对象, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE))" toReformat="false" toShortenFQNames="true">
+		<variable name="srcPath" expression="" defaultValue="&quot;srcPath&quot;" alwaysStopAt="true"/>
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;cropInScreen(kotlin.String, kotlin.Function1);" value="$images-&gt;cropInScreen($outputPath$, $regionBuilder$);" description="将屏幕裁剪一个矩形区域保存到 outputPath 中, 会自动申请屏幕截图权限&#10;&#10;@param outputPath 保存路径, 如果该路径文件已存在，那么会删除后在保存到该文件&#10;@param regionBuilder 构建矩形的函数Receiver(root=CustomDocTag(children=[P(children=[Text(body=待构建的矩形对象, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE))" toReformat="false" toShortenFQNames="true">
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;matchTemplates(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.Int, kotlin.Boolean);" value="$images-&gt;matchTemplates($srcPath$, $templatePath$, $similarity$, $limit$, $regionBuilder$, $outputPath$, $method$, $parallel$);" description="从文件路径读取图像进行模板匹配（多目标）, 也就是从 srcPath 查找 templatePath。&#10;&#10;@param srcPath 原图像文件路径, 大图&#10;@param templatePath 模板图像文件路径, 小图&#10;@param similarity 匹配相似度，必须在 0, 100 范围内&#10;@param regionBuilder 限定仅在原图像的该区域内查找&#10;@param outputPath 匹配结果图像输出路径&#10;@param method 模板匹配方法&#10;@param parallel 是否启用并行处理&#10;@return 匹配到的所有结果（按相似度降序），包含匹配区域和相似度Throws(root=CustomDocTag(children=[P(children=[Text(body=如果 similarity 无效或文件路径无效, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="srcPath" expression="" defaultValue="&quot;srcPath&quot;" alwaysStopAt="true"/>
+		<variable name="templatePath" expression="" defaultValue="&quot;templatePath&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<variable name="method" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true"/>
+		<variable name="parallel" expression="" defaultValue="&quot;parallel&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;matchTemplatesInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.Int, kotlin.Boolean);" value="$images-&gt;matchTemplatesInScreen($templatePath$, $similarity$, $limit$, $regionBuilder$, $outputPath$, $method$, $parallel$);" description="从屏幕中查找 templatePath, 会自动申请屏幕截图权限&#10;&#10;@param templatePath 模板图像文件路径, 小图&#10;@param similarity 匹配相似度，必须在 0, 100 范围内&#10;@param regionBuilder 限定仅在原图像的该区域内查找&#10;@param outputPath 匹配结果图像输出路径&#10;@param method 模板匹配方法&#10;@param parallel 是否启用并行处理&#10;@return 匹配到的所有结果（按相似度降序），包含匹配区域和相似度Throws(root=CustomDocTag(children=[P(children=[Text(body=如果 similarity 无效或文件路径无效, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="templatePath" expression="" defaultValue="&quot;templatePath&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<variable name="method" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true"/>
+		<variable name="parallel" expression="" defaultValue="&quot;parallel&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;compareColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Boolean);" value="$images-&gt;compareColors($imagePath$, $firstColor$, $x$, $y$, $similarity$, $regionBuilder$, $colors$, $algorithm$, $ignoreAlpha$);" description="比较imagePath图片指定坐标的颜色是否与目标颜色匹配，或比较主坐标及其偏移点的颜色是否匹配。&#10;如果 colors 为 null 或空，则仅比较指定坐标 (x, y) 的颜色是否与 firstColor 匹配。 如果 colors 不为空，则解析颜色偏移字符串，比较主坐标及其偏移点的颜色是否匹配，使用每个偏移点的 similarity。&#10;&#10;@param imagePath 输入图像的文件路径。&#10;@param firstColor 目标颜色（或主颜色），支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。&#10;@param x 主坐标的横坐标。&#10;@param y 主坐标的纵坐标。&#10;@param similarity 颜色相似度（仅用于主颜色），范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。&#10;@param regionBuilder 可选参数，指定查找区域（默认全图）。&#10;@param colors 颜色偏移字符串，格式如 \&quot;6|1|0x969696|90,1|12|0xee969696|95,-4|0|#969696\&quot;（可选）。&#10;@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。&#10;@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。&#10;@return 是否所有坐标的颜色都匹配，true 表示匹配，false 表示不匹配。Throws(root=CustomDocTag(children=[P(children=[Text(body=如果 imagePath 无效、similarity 超出范围、algorithm 无效或颜色格式错误。, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="imagePath" expression="" defaultValue="&quot;imagePath&quot;" alwaysStopAt="true"/>
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<variable name="colors" expression="" defaultValue="&quot;colors&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;compareColorsInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Boolean);" value="$images-&gt;compareColorsInScreen($firstColor$, $x$, $y$, $similarity$, $regionBuilder$, $colors$, $algorithm$, $ignoreAlpha$);" description="比较屏幕中指定坐标的颜色是否与目标颜色匹配，或比较主坐标及其偏移点的颜色是否匹配, 会自动申请屏幕截图权限。&#10;如果 colors 为 null 或空，则仅比较指定坐标 (x, y) 的颜色是否与 firstColor 匹配。 如果 colors 不为空，则解析颜色偏移字符串，比较主坐标及其偏移点的颜色是否匹配，使用每个偏移点的 similarity。&#10;&#10;@param firstColor 目标颜色（或主颜色），支持格式：0x969696、#969696、969696（RGB），或 0xee969696（ARGB）。&#10;@param x 主坐标的横坐标。&#10;@param y 主坐标的纵坐标。&#10;@param similarity 颜色相似度（仅用于主颜色），范围 0, 100，0 表示最宽松（允许任何颜色），100 表示最严格（完全匹配）。&#10;@param regionBuilder 可选参数，指定查找区域（默认全图）。&#10;@param colors 颜色偏移字符串，格式如 \&quot;6|1|0x969696|90,1|12|0xee969696|95,-4|0|#969696\&quot;（可选）。&#10;@param algorithm 匹配算法，支持：equal，diff，rgb，rgb+，hs。&#10;@param ignoreAlpha 是否忽略透明度比较，默认为 true（包含透明度比较）。&#10;@return 是否所有坐标的颜色都匹配，true 表示匹配，false 表示不匹配。Throws(root=CustomDocTag(children=[P(children=[Text(body=如果 imagePath 无效、similarity 超出范围、algorithm 无效或颜色格式错误。, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<variable name="colors" expression="" defaultValue="&quot;colors&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;findColorsInScreen(kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean);" value="$images-&gt;findColorsInScreen($firstColor$, $similarity$, $limit$, $regionBuilder$, $colors$, $algorithm$, $direction$, $ignoreAlpha$);" description="查找屏幕中中匹配的颜色点集合, 会自动申请屏幕截图权限&#10;如果 colors 为空，查找匹配主颜色的点；否则查找匹配主颜色及其偏移颜色的点，最多返回 limit 个。&#10;&#10;@param firstColor 目标主颜色，支持格式：0x969696、#969696、969696（RGB）或 0xee969696（ARGB）&#10;@param similarity 主颜色的相似度，范围 0, 100&#10;@param limit 最大返回的匹配点数量&#10;@param regionBuilder 查找区域构建函数&#10;@param colors 颜色偏移字符串，格式如 \&quot;6|1|0x969696|90,1|12|0xee969696|95\&quot;&#10;@param algorithm 匹配算法，支持：equal、diff、rgb、rgb+、hs&#10;@param direction 搜索方向&#10;@param ignoreAlpha 是否忽略透明度比较&#10;@return 匹配的坐标点及其相似度的集合Throws(root=CustomDocTag(children=[P(children=[Text(body=如果参数无效, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<variable name="colors" expression="" defaultValue="&quot;colors&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="direction" expression="" defaultValue="&quot;direction&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;findColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1, kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean);" value="$images-&gt;findColors($imagePath$, $firstColor$, $similarity$, $limit$, $regionBuilder$, $colors$, $algorithm$, $direction$, $ignoreAlpha$);" description="查找图像中匹配的颜色点集合&#10;如果 colors 为空，查找匹配主颜色的点；否则查找匹配主颜色及其偏移颜色的点，最多返回 limit 个。&#10;&#10;@param imagePath 输入图像文件路径&#10;@param firstColor 目标主颜色，支持格式：0x969696、#969696、969696（RGB）或 0xee969696（ARGB）&#10;@param similarity 主颜色的相似度，范围 0, 100&#10;@param limit 最大返回的匹配点数量&#10;@param regionBuilder 查找区域构建函数&#10;@param colors 颜色偏移字符串，格式如 \&quot;6|1|0x969696|90,1|12|0xee969696|95\&quot;&#10;@param algorithm 匹配算法，支持：equal、diff、rgb、rgb+、hs&#10;@param direction 搜索方向&#10;@param ignoreAlpha 是否忽略透明度比较&#10;@return 匹配的坐标点及其相似度的集合Throws(root=CustomDocTag(children=[P(children=[Text(body=如果参数无效, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="imagePath" expression="" defaultValue="&quot;imagePath&quot;" alwaysStopAt="true"/>
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<variable name="colors" expression="" defaultValue="&quot;colors&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="direction" expression="" defaultValue="&quot;direction&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;getSize(kotlin.String);" value="$images-&gt;getSize($imagePath$);" description="通过边界解码高效获取指定图片文件的宽高尺寸（不会加载完整图片像素数据）&#10;&lt;p&gt;使用 {@link android.util.Size} 封装图片的宽度和高度信息，适用于图片加载前的尺寸预判场景（如计算缩放比例）&lt;/p&gt;&#10;&#10;@param imagePath 待获取尺寸的图片文件路径（支持本地文件系统路径，如 SD 卡或内部存储路径）&#10;@return 封装图片宽度和高度的 {@link android.util.Size} 实例，宽高值为像素单位Throws(root=CustomDocTag(children=[P(children=[Text(body=当图片路径为空或格式不合法时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当应用缺乏文件读取权限时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=极端情况下解码边界信息时内存不足（需配合内存优化策略使用）, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.OutOfMemoryError, exceptionAddress=java.lang/OutOfMemoryError///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="imagePath" expression="" defaultValue="&quot;imagePath&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;getGlobalName();" value="$images-&gt;getGlobalName();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;getPublicType();" value="$images-&gt;getPublicType();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;isPrefixRequired();" value="$images-&gt;isPrefixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name="Images-&gt;isSuffixRequired();" value="$images-&gt;isSuffixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestRegionResult-&gt;getRegion();" value="-&gt;getRegion();" description="RegionResult-&gt;getRegion&#10;获取匹配结果的区域&#10;&#10;@return 匹配结果的区域" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestRegionResult-&gt;getSimilarity();" value="-&gt;getSimilarity();" description="RegionResult-&gt;getSimilarity&#10;获取匹配结果的相似度&#10;&#10;@return 匹配结果的相似度" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestResult-&gt;getSimilarity();" value="-&gt;getSimilarity();" description="Result-&gt;getSimilarity&#10;获取匹配结果的相似度&#10;&#10;@return 匹配结果的相似度" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestResults-&gt;getAll();" value="-&gt;getAll();" description="Results-&gt;getAll&#10;获取集合中的所有结果.&#10;&#10;@return 集合中的所有结果" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestResults-&gt;getBest();" value="-&gt;getBest();" description="Results-&gt;getBest&#10;获取相似度最高的匹配结果&#10;&#10;@return 相似度最高的匹配结果" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getVariables(com.m8test.script.core.api.engine.ScriptContext);" value="-&gt;getVariables($scriptContext$);" description="OpencvComponent-&gt;getVariables&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="scriptContext" expression="" defaultValue="&quot;scriptContext&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;addClassLoader(dalvik.system.BaseDexClassLoader);" value="-&gt;addClassLoader($classLoader$);" description="OpencvComponent-&gt;addClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoader" expression="" defaultValue="&quot;classLoader&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;addClassLoader(kotlin.Function1);" value="-&gt;addClassLoader($classLoaderConfig$);" description="OpencvComponent-&gt;addClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;addDependency(kotlin.Function1);" value="-&gt;addDependency($dependency$);" description="OpencvComponent-&gt;addDependency&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="dependency" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;configureClassLoader(kotlin.Function1);" value="-&gt;configureClassLoader($classLoaderConfig$);" description="OpencvComponent-&gt;configureClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;configureClassLoader(dalvik.system.BaseDexClassLoader, kotlin.Function1);" value="-&gt;configureClassLoader($dexClassLoader$, $classLoaderConfig$);" description="OpencvComponent-&gt;configureClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="dexClassLoader" expression="" defaultValue="&quot;dexClassLoader&quot;" alwaysStopAt="true"/>
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;createClassLoader(kotlin.Function1);" value="-&gt;createClassLoader($classLoaderConfig$);" description="OpencvComponent-&gt;createClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getApplication();" value="-&gt;getApplication();" description="OpencvComponent-&gt;getApplication&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getClassLoader();" value="-&gt;getClassLoader();" description="OpencvComponent-&gt;getClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getClassLoaders();" value="-&gt;getClassLoaders();" description="OpencvComponent-&gt;getClassLoaders&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getFilesDir();" value="-&gt;getFilesDir();" description="OpencvComponent-&gt;getFilesDir&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getName();" value="-&gt;getName();" description="OpencvComponent-&gt;getName&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getPackageInfo();" value="-&gt;getPackageInfo();" description="OpencvComponent-&gt;getPackageInfo&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getPluginInfo();" value="-&gt;getPluginInfo();" description="OpencvComponent-&gt;getPluginInfo&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getResources();" value="-&gt;getResources();" description="OpencvComponent-&gt;getResources&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;getSettings();" value="-&gt;getSettings();" description="OpencvComponent-&gt;getSettings&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;loadClass(kotlin.String);" value="-&gt;loadClass($className$);" description="OpencvComponent-&gt;loadClass&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="className" expression="" defaultValue="&quot;className&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;registerUICreator(com.m8test.script.core.api.ui.UICreator);" value="-&gt;registerUICreator($uiCreator$);" description="OpencvComponent-&gt;registerUICreator&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="uiCreator" expression="" defaultValue="&quot;uiCreator&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;removeClassLoader(dalvik.system.BaseDexClassLoader);" value="-&gt;removeClassLoader($classLoader$);" description="OpencvComponent-&gt;removeClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoader" expression="" defaultValue="&quot;classLoader&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;removeDependency(kotlin.Function1);" value="-&gt;removeDependency($dependency$);" description="OpencvComponent-&gt;removeDependency&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="dependency" expression="" defaultValue="                                    &quot;function($v1) { 
+    
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent-&gt;unregisterUICreator(com.m8test.script.core.api.ui.UICreator);" value="-&gt;unregisterUICreator($uiCreator$);" description="OpencvComponent-&gt;unregisterUICreator&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="uiCreator" expression="" defaultValue="&quot;uiCreator&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="PHP" value="true"/>
+		</context>
+	</template>
+</templateSet>

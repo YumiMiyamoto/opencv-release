@@ -1,0 +1,484 @@
+<templateSet group="M8Test-java">
+	<template name="Colors.getColorHex(kotlin.String, kotlin.Int, kotlin.Int);" value="$colors.getColorHex($image$, $x$, $y$);" description="获取图像中指定坐标的颜色十六进制值。&#10;从指定图像文件的(x,y)坐标提取像素颜色，并转换为标准化的十六进制字符串格式。 适用于需要精确获取图像中特定点颜色的场景。&#10;&#10;@param image 图像文件路径，支持常见格式（如PNG、JPEG等）&#10;@param x 目标像素的横坐标（像素单位，从左向右递增）&#10;@param y 目标像素的纵坐标（像素单位，从上向下递增）&#10;@return 颜色的十六进制字符串：     - 不包含透明度时：\&quot;#RRGGBB\&quot;（如\&quot;#FF0080\&quot;）     - 包含透明度时：\&quot;#AARRGGBB\&quot;（如\&quot;#80FF0080\&quot;）Throws(root=CustomDocTag(children=[P(children=[Text(body=当图像路径无效、坐标超出图像范围时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当图像文件无法读取时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.io.IOException, exceptionAddress=java.io/IOException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="image" expression="" defaultValue="&quot;image&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.getColorHexInDisplay(kotlin.Int, kotlin.Int, kotlin.Int);" value="$colors.getColorHexInDisplay($displayId$, $x$, $y$);" description="获取屏幕中指定坐标的颜色十六进制值（自动申请权限）。&#10;实时获取屏幕指定位置的像素颜色，自动处理屏幕截图权限申请，适用于界面元素颜色验证。&#10;&#10;@param displayId 屏幕标识符：     - 0 表示物理屏幕的镜像     - 其他值表示对应的虚拟屏幕&#10;@param x 目标像素的横坐标（基于屏幕分辨率，从左向右递增）&#10;@param y 目标像素的纵坐标（基于屏幕分辨率，从上向下递增）&#10;@return 颜色的十六进制字符串：     - 不包含透明度时：\&quot;#RRGGBB\&quot;     - 包含透明度时：\&quot;#AARRGGBB\&quot;Throws(root=CustomDocTag(children=[P(children=[Text(body=当屏幕ID无效或坐标超出屏幕范围时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当屏幕截图权限申请失败时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="displayId" expression="" defaultValue="&quot;displayId&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.isSimilar(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean);" value="$colors.isSimilar($color1$, $color2$, $similarity$, $algorithm$, $ignoreAlpha$);" description="判断两个颜色是否达到指定相似度。&#10;使用指定算法比较两种颜色的相似度，并判断是否满足设定的阈值要求。 支持多种颜色格式输入和比较策略，满足不同场景的精度需求。&#10;&#10;@param color1 待比较的第一个颜色，支持格式：     - RGB：0x969696、#969696、969696     - ARGB：0xee969696（包含透明度通道）&#10;@param color2 待比较的第二个颜色，支持格式同上&#10;@param similarity 相似度阈值（范围0-100）：     - 0表示最宽松（允许任何颜色）     - 100表示最严格（要求完全匹配）     null时使用默认阈值（通常为90）&#10;@param algorithm 比较算法，支持以下值：     - \&quot;equal\&quot;: 完全相等匹配（仅当两个颜色完全相同时返回true）     - \&quot;diff\&quot;: 基于颜色差值的比较     - \&quot;rgb\&quot;: 分别比较RGB三个通道的差异     - \&quot;rgb+\&quot;: 增强型RGB比较（考虑人眼对不同颜色的敏感度）     - \&quot;hs\&quot;: 基于色相和饱和度的比较     null时使用默认算法（通常为\&quot;rgb+\&quot;）&#10;@param ignoreAlpha 是否忽略透明度通道：     - true: 仅比较RGB通道     - false: 同时比较ARGB四个通道     null时默认值为true&#10;@return true表示两个颜色的相似度达到或超过阈值，false则表示未达到Throws(root=CustomDocTag(children=[P(children=[Text(body=当颜色格式无效、算法不支持或相似度超出范围时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="color1" expression="" defaultValue="&quot;color1&quot;" alwaysStopAt="true"/>
+		<variable name="color2" expression="" defaultValue="&quot;color2&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.getSimilarity(kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean);" value="$colors.getSimilarity($color1$, $color2$, $algorithm$, $ignoreAlpha$);" description="计算两个颜色的相似度得分。&#10;使用指定算法量化两个颜色的相似程度，返回0-100的得分，值越高表示颜色越相似。 适用于需要知道具体相似程度而非简单判断是否匹配的场景。&#10;&#10;@param color1 待比较的第一个颜色，支持格式同isSimilar方法&#10;@param color2 待比较的第二个颜色，支持格式同isSimilar方法&#10;@param algorithm 比较算法，支持值同isSimilar方法，null使用默认算法&#10;@param ignoreAlpha 是否忽略透明度通道，规则同isSimilar方法，null默认true&#10;@return 相似度得分（0-100）：     - 100表示完全相同     - 0表示差异最大Throws(root=CustomDocTag(children=[P(children=[Text(body=当颜色格式无效或算法不支持时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="color1" expression="" defaultValue="&quot;color1&quot;" alwaysStopAt="true"/>
+		<variable name="color2" expression="" defaultValue="&quot;color2&quot;" alwaysStopAt="true"/>
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.getGlobalName();" value="$colors.getGlobalName();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.getPublicType();" value="$colors.getPublicType();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.isPrefixRequired();" value="$colors.isPrefixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Colors.isSuffixRequired();" value="$colors.isSuffixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCoordinateResult.getCoordinate();" value=".getCoordinate();" description="CoordinateResult.getCoordinate&#10;获取坐标&#10;&#10;@return 坐标" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCoordinateResult.getSimilarity();" value=".getSimilarity();" description="CoordinateResult.getSimilarity&#10;获取匹配结果的相似度&#10;&#10;@return 匹配结果的相似度" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.captureDisplay(kotlin.Int, kotlin.String);" value="$images.captureDisplay($displayId$, $outputPath$);" description="捕获指定屏幕并保存为图像文件。&#10;该方法会截取指定屏幕的完整内容，并保存到指定路径。如果目标文件已存在， 会先删除原有文件再写入新内容。适用于获取当前屏幕状态作为操作依据或证据。&#10;&#10;@param displayId 屏幕标识符：     - 0 表示物理屏幕的镜像     - 其他值表示对应的虚拟屏幕&#10;@param outputPath 图像保存路径，需包含文件名及扩展名（如 \&quot;/sdcard/screen.png\&quot;）Throws(root=CustomDocTag(children=[P(children=[Text(body=当应用缺乏屏幕截图权限或文件写入权限时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当输出路径无效或屏幕ID不存在时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="displayId" expression="" defaultValue="&quot;displayId&quot;" alwaysStopAt="true"/>
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.crop(kotlin.String, kotlin.String, kotlin.Function1);" value="$images.crop($srcPath$, $outputPath$, $regionBuilder$);" description="裁剪图像文件的指定区域并保存。&#10;从指定的源图像中裁剪由regionBuilder定义的矩形区域，将结果保存到目标路径。 适用于提取图像中的特定部分进行后续分析。&#10;&#10;@param srcPath 源图像文件路径，必须是可读取的本地图像文件&#10;@param outputPath 裁剪结果保存路径，若文件已存在会被覆盖&#10;@param regionBuilder 用于定义裁剪区域的lambda表达式，通过操作Rect对象设置区域坐标Receiver(root=CustomDocTag(children=[P(children=[Text(body=待构建的矩形对象，通过设置left、top、right、bottom属性定义裁剪区域, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE))Throws(root=CustomDocTag(children=[P(children=[Text(body=当源文件不存在、路径无效或区域设置不合法时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当文件读写过程中发生错误时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=IOException, exceptionAddress=null)" toReformat="false" toShortenFQNames="true">
+		<variable name="srcPath" expression="" defaultValue="&quot;srcPath&quot;" alwaysStopAt="true"/>
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.cropInDisplay(kotlin.Int, kotlin.String, kotlin.Function1);" value="$images.cropInDisplay($displayId$, $outputPath$, $regionBuilder$);" description="裁剪屏幕指定区域并保存为图像文件（自动申请权限）。&#10;结合屏幕截图与区域裁剪功能，直接从指定屏幕截取矩形区域并保存。适用于快速获取 屏幕特定区域的图像，如控件截图、验证码区域等。&#10;&#10;@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕&#10;@param outputPath 裁剪结果保存路径，若文件已存在会被覆盖&#10;@param regionBuilder 用于定义裁剪区域的lambda表达式，坐标基于屏幕分辨率Receiver(root=CustomDocTag(children=[P(children=[Text(body=待构建的矩形对象，通过设置left、top、right、bottom属性定义裁剪区域, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE))Throws(root=CustomDocTag(children=[P(children=[Text(body=当自动申请权限失败时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当路径无效、屏幕ID不存在或区域设置不合法时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="displayId" expression="" defaultValue="&quot;displayId&quot;" alwaysStopAt="true"/>
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<variable name="regionBuilder" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.matchTemplates(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1);" value="$images.matchTemplates($srcPath$, $templatePath$, $similarity$, $limit$, $config$);" description="在图像中查找匹配的模板（多目标支持）。&#10;从源图像中搜索与模板图像相似的所有区域，返回按相似度降序排列的匹配结果。 适用于在大图中定位小图元素，如在界面截图中查找按钮、图标等。&#10;&#10;@param srcPath 源图像文件路径（大图），作为搜索范围&#10;@param templatePath 模板图像文件路径（小图），作为搜索目标&#10;@param similarity 匹配相似度阈值（0-100），值越高匹配要求越严格；null使用默认值&#10;@param limit 最大返回结果数量，null表示无限制&#10;@param config 配置构建器，用于设置高级匹配参数&#10;@return 包含所有匹配区域的Results对象，每个结果包含区域坐标和相似度Throws(root=CustomDocTag(children=[P(children=[Text(body=当相似度超出范围、文件路径无效或图像无法解析时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)See(root=CustomDocTag(children=[P(children=[Text(body=了解更多配置选项, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=com.m8test.image.api.config.MatchTemplatesConfig, address=com.m8test.image.api.config/MatchTemplatesConfig///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="srcPath" expression="" defaultValue="&quot;srcPath&quot;" alwaysStopAt="true"/>
+		<variable name="templatePath" expression="" defaultValue="&quot;templatePath&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="config" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.matchTemplatesInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1);" value="$images.matchTemplatesInDisplay($displayId$, $templatePath$, $similarity$, $limit$, $config$);" description="在屏幕中查找匹配的模板（自动申请权限）。&#10;结合屏幕截图与模板匹配功能，直接在指定屏幕中搜索与模板相似的区域。 适用于界面元素定位、自动化操作等场景。&#10;&#10;@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕&#10;@param templatePath 模板图像文件路径（小图），作为搜索目标&#10;@param similarity 匹配相似度阈值（0-100），值越高匹配要求越严格；null使用默认值&#10;@param limit 最大返回结果数量，null表示无限制&#10;@param config 配置构建器，用于设置高级匹配参数&#10;@return 包含所有匹配区域的Results对象，每个结果包含区域坐标和相似度Throws(root=CustomDocTag(children=[P(children=[Text(body=当相似度超出范围、文件路径无效或屏幕ID不存在时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当自动申请权限失败时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)See(root=CustomDocTag(children=[P(children=[Text(body=了解更多配置选项, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=com.m8test.image.api.config.MatchTemplatesConfig, address=com.m8test.image.api.config/MatchTemplatesConfig///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="displayId" expression="" defaultValue="&quot;displayId&quot;" alwaysStopAt="true"/>
+		<variable name="templatePath" expression="" defaultValue="&quot;templatePath&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="config" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.compareColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1);" value="$images.compareColors($imagePath$, $firstColor$, $x$, $y$, $similarity$, $config$);" description="比较图像中指定坐标的颜色是否匹配目标颜色。&#10;支持两种匹配模式：&#10;Ol(children=[Li(children=[P(children=[Text(body=当配置中colors为空时，仅比较(x,y)坐标颜色与firstColor的相似度, children=[], params={})], params={})], params={}), Li(children=[P(children=[Text(body=当配置中colors不为空时，同时比较主坐标及偏移点的颜色是否匹配, children=[], params={})], params={})], params={})], params={start=1})&#10;适用于验证像素级颜色信息，如状态指示、颜色标识等场景。&#10;&#10;@param imagePath 待分析的图像文件路径&#10;@param firstColor 目标主颜色，支持格式：     - RGB: 0x969696、#969696、969696     - ARGB: 0xee969696（包含透明度）&#10;@param x 主坐标的横坐标（像素单位）&#10;@param y 主坐标的纵坐标（像素单位）&#10;@param similarity 主颜色相似度阈值（0-100），null使用默认值&#10;@param config 颜色比较配置构建器&#10;@return true表示所有指定坐标的颜色均匹配，false表示存在不匹配Throws(root=CustomDocTag(children=[P(children=[Text(body=当参数无效、颜色格式错误或算法不支持时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)See(root=CustomDocTag(children=[P(children=[Text(body=了解更多配置选项, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=com.m8test.image.api.config.CompareColorsConfig, address=com.m8test.image.api.config/CompareColorsConfig///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="imagePath" expression="" defaultValue="&quot;imagePath&quot;" alwaysStopAt="true"/>
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="config" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.compareColorsInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1);" value="$images.compareColorsInDisplay($displayId$, $firstColor$, $x$, $y$, $similarity$, $config$);" description="比较屏幕中指定坐标的颜色是否匹配目标颜色（自动申请权限）。&#10;直接从屏幕获取指定坐标的颜色信息进行比较，支持主坐标及偏移点的多颜色验证， 适用于实时验证屏幕元素的颜色状态。&#10;&#10;@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕&#10;@param firstColor 目标主颜色，支持RGB和ARGB格式（同compareColors方法）&#10;@param x 主坐标的横坐标（基于屏幕分辨率）&#10;@param y 主坐标的纵坐标（基于屏幕分辨率）&#10;@param similarity 主颜色相似度阈值（0-100），null使用默认值&#10;@param config 颜色比较配置构建器&#10;@return true表示所有指定坐标的颜色均匹配，false表示存在不匹配Throws(root=CustomDocTag(children=[P(children=[Text(body=当参数无效、颜色格式错误或算法不支持时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当自动申请权限失败时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)See(root=CustomDocTag(children=[P(children=[Text(body=了解更多配置选项, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=com.m8test.image.api.config.CompareColorsConfig, address=com.m8test.image.api.config/CompareColorsConfig///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="displayId" expression="" defaultValue="&quot;displayId&quot;" alwaysStopAt="true"/>
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="x" expression="" defaultValue="&quot;x&quot;" alwaysStopAt="true"/>
+		<variable name="y" expression="" defaultValue="&quot;y&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="config" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.findColorsInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1);" value="$images.findColorsInDisplay($displayId$, $firstColor$, $similarity$, $limit$, $config$);" description="在屏幕中查找匹配指定颜色的所有点（自动申请权限）。&#10;扫描指定屏幕，返回所有与目标颜色相似的坐标点，按相似度降序排列。 适用于查找特定颜色的元素分布，如地图标记、数据可视化点等。&#10;&#10;@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕&#10;@param firstColor 目标主颜色，支持RGB和ARGB格式&#10;@param similarity 颜色相似度阈值（0-100），null使用默认值&#10;@param limit 最大返回结果数量，null表示无限制&#10;@param config 颜色查找配置构建器&#10;@return 包含匹配坐标的Results对象，每个结果包含坐标和相似度Throws(root=CustomDocTag(children=[P(children=[Text(body=当参数无效或颜色格式错误时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当自动申请权限失败时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)See(root=CustomDocTag(children=[P(children=[Text(body=了解更多配置选项, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=com.m8test.image.api.config.FindColorsConfig, address=com.m8test.image.api.config/FindColorsConfig///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="displayId" expression="" defaultValue="&quot;displayId&quot;" alwaysStopAt="true"/>
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="config" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.findColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1);" value="$images.findColors($imagePath$, $firstColor$, $similarity$, $limit$, $config$);" description="在图像中查找匹配指定颜色的所有点。&#10;扫描指定图像文件，返回所有与目标颜色相似的坐标点，按相似度降序排列。 适用于图像分析、颜色分布统计等场景。&#10;&#10;@param imagePath 待分析的图像文件路径&#10;@param firstColor 目标主颜色，支持RGB和ARGB格式&#10;@param similarity 颜色相似度阈值（0-100），null使用默认值&#10;@param limit 最大返回结果数量，null表示无限制&#10;@param config 颜色查找配置构建器&#10;@return 包含匹配坐标的Results对象，每个结果包含坐标和相似度Throws(root=CustomDocTag(children=[P(children=[Text(body=当参数无效、颜色格式错误或文件无法读取时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)See(root=CustomDocTag(children=[P(children=[Text(body=了解更多配置选项, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=com.m8test.image.api.config.FindColorsConfig, address=com.m8test.image.api.config/FindColorsConfig///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="imagePath" expression="" defaultValue="&quot;imagePath&quot;" alwaysStopAt="true"/>
+		<variable name="firstColor" expression="" defaultValue="&quot;firstColor&quot;" alwaysStopAt="true"/>
+		<variable name="similarity" expression="" defaultValue="&quot;similarity&quot;" alwaysStopAt="true"/>
+		<variable name="limit" expression="" defaultValue="&quot;limit&quot;" alwaysStopAt="true"/>
+		<variable name="config" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.getSize(kotlin.String);" value="$images.getSize($imagePath$);" description="高效获取图像文件的尺寸信息（不加载完整像素数据）。&#10;通过解析图像文件头部信息获取宽高，避免加载整个图像到内存，适用于预处理阶段的 尺寸判断、比例计算等场景，尤其对大尺寸图像性能优势明显。&#10;&#10;@param imagePath 待获取尺寸的图像文件路径（支持JPEG、PNG等常见格式）&#10;@return Size对象，包含图像的宽度（width）和高度（height），单位为像素Throws(root=CustomDocTag(children=[P(children=[Text(body=当路径为空、文件不存在或格式不支持时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=kotlin.IllegalArgumentException, exceptionAddress=kotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=当应用缺乏文件读取权限时抛出, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.SecurityException, exceptionAddress=java.lang/SecurityException///PointingToDeclaration/)Throws(root=CustomDocTag(children=[P(children=[Text(body=极端情况下解析元数据时发生内存不足, children=[], params={})], params={})], params={}, name=MARKDOWN_FILE), name=java.lang.OutOfMemoryError, exceptionAddress=java.lang/OutOfMemoryError///PointingToDeclaration/)" toReformat="false" toShortenFQNames="true">
+		<variable name="imagePath" expression="" defaultValue="&quot;imagePath&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.getGlobalName();" value="$images.getGlobalName();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.getPublicType();" value="$images.getPublicType();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.isPrefixRequired();" value="$images.isPrefixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name="Images.isSuffixRequired();" value="$images.isSuffixRequired();" description="" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestRegionResult.getRegion();" value=".getRegion();" description="RegionResult.getRegion&#10;获取匹配结果的区域&#10;&#10;@return 匹配结果的区域" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestRegionResult.getSimilarity();" value=".getSimilarity();" description="RegionResult.getSimilarity&#10;获取匹配结果的相似度&#10;&#10;@return 匹配结果的相似度" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestResult.getSimilarity();" value=".getSimilarity();" description="Result.getSimilarity&#10;获取匹配结果的相似度&#10;&#10;@return 匹配结果的相似度" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestResults.getAll();" value=".getAll();" description="Results.getAll&#10;获取集合中的所有结果.&#10;&#10;@return 集合中的所有结果" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestResults.getBest();" value=".getBest();" description="Results.getBest&#10;获取相似度最高的匹配结果&#10;&#10;@return 相似度最高的匹配结果" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCompareColorsConfig.setRegion(kotlin.Function1);" value=".setRegion($region$);" description="CompareColorsConfig.setRegion&#10;设置区域构建器&#10;&#10;@param region 用于构建比较区域的lambda表达式，通过Rect的扩展函数定义比较区域；     null表示在整个图像范围内进行比较" toReformat="false" toShortenFQNames="true">
+		<variable name="region" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCompareColorsConfig.setColors(kotlin.String);" value=".setColors($colors$);" description="CompareColorsConfig.setColors&#10;设置颜色偏移字符串&#10;&#10;@param colors 颜色偏移字符串，格式示例：\&quot;6|1|0x969696|90,1|12|0xee969696|95,-4|0|#969696\&quot;；     格式说明：每个偏移点由\&quot;x偏移|y偏移|颜色值|相似度\&quot;组成，多个点用逗号分隔；     null或空表示仅比较主坐标颜色" toReformat="false" toShortenFQNames="true">
+		<variable name="colors" expression="" defaultValue="&quot;colors&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCompareColorsConfig.setAlgorithm(kotlin.String);" value=".setAlgorithm($algorithm$);" description="CompareColorsConfig.setAlgorithm&#10;设置颜色匹配算法&#10;&#10;@param algorithm 匹配算法标识，支持以下值：     - \&quot;equal\&quot;: 完全相等匹配     - \&quot;diff\&quot;: 差值比较     - \&quot;rgb\&quot;: RGB通道分别比较     - \&quot;rgb+\&quot;: 增强型RGB比较     - \&quot;hs\&quot;: 色相饱和度比较     null表示使用默认算法" toReformat="false" toShortenFQNames="true">
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestCompareColorsConfig.setIgnoreAlpha(kotlin.Boolean);" value=".setIgnoreAlpha($ignoreAlpha$);" description="CompareColorsConfig.setIgnoreAlpha&#10;设置是否忽略透明度比较的标志&#10;&#10;@param ignoreAlpha true表示忽略透明度进行比较，false表示包含透明度比较；     null表示使用默认设置（默认值为true）" toReformat="false" toShortenFQNames="true">
+		<variable name="ignoreAlpha" expression="" defaultValue="&quot;ignoreAlpha&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestFindColorsConfig.setRegion(kotlin.Function1);" value=".setRegion($builder$);" description="FindColorsConfig.setRegion&#10;设置查找区域构建函数&#10;该函数用于定义颜色查找的区域范围&#10;&#10;@param builder 区域构建函数，为null时查找整个图像" toReformat="false" toShortenFQNames="true">
+		<variable name="builder" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestFindColorsConfig.setColors(kotlin.String);" value=".setColors($colors$);" description="FindColorsConfig.setColors&#10;设置颜色偏移字符串&#10;格式如 \&quot;6|1|0x969696|90,1|12|0xee969696|95\&quot;，用于定义除主颜色外的其他匹配颜色&#10;&#10;@param colors 颜色偏移字符串，为null表示不使用偏移颜色" toReformat="false" toShortenFQNames="true">
+		<variable name="colors" expression="" defaultValue="&quot;colors&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestFindColorsConfig.setAlgorithm(kotlin.String);" value=".setAlgorithm($algorithm$);" description="FindColorsConfig.setAlgorithm&#10;设置匹配算法&#10;支持的算法包括：equal、diff、rgb、rgb+、hs&#10;&#10;@param algorithm 匹配算法名称，为null时使用默认算法" toReformat="false" toShortenFQNames="true">
+		<variable name="algorithm" expression="" defaultValue="&quot;algorithm&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestFindColorsConfig.setDirection(kotlin.Int);" value=".setDirection($direction$);" description="FindColorsConfig.setDirection&#10;设置搜索方向&#10;定义图像中颜色查找的扫描方向&#10;&#10;@param direction 搜索方向标识，为null时使用默认方向" toReformat="false" toShortenFQNames="true">
+		<variable name="direction" expression="" defaultValue="&quot;direction&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestFindColorsConfig.setIgnoreAlpha(kotlin.Boolean);" value=".setIgnoreAlpha($ignore$);" description="FindColorsConfig.setIgnoreAlpha&#10;设置是否忽略透明度比较&#10;&#10;@param ignore true表示忽略透明度，false表示考虑透明度，为null时使用默认设置" toReformat="false" toShortenFQNames="true">
+		<variable name="ignore" expression="" defaultValue="&quot;ignore&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestMatchTemplatesConfig.setRegion(kotlin.Function1);" value=".setRegion($region$);" description="MatchTemplatesConfig.setRegion&#10;设置区域构建器&#10;&#10;@param region 用于构建匹配区域的lambda表达式，通过Rect的扩展函数定义匹配区域；     null表示在整个图像范围内查找" toReformat="false" toShortenFQNames="true">
+		<variable name="region" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestMatchTemplatesConfig.setOutputPath(kotlin.String);" value=".setOutputPath($outputPath$);" description="MatchTemplatesConfig.setOutputPath&#10;设置匹配结果图像输出路径&#10;&#10;@param outputPath 结果图像保存路径；null表示不保存结果图像" toReformat="false" toShortenFQNames="true">
+		<variable name="outputPath" expression="" defaultValue="&quot;outputPath&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestMatchTemplatesConfig.setMethod(kotlin.Int);" value=".setMethod($method$);" description="MatchTemplatesConfig.setMethod&#10;设置模板匹配方法&#10;&#10;@param method 匹配算法方法标识；null表示使用默认匹配方法" toReformat="false" toShortenFQNames="true">
+		<variable name="method" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestMatchTemplatesConfig.setParallel(kotlin.Boolean);" value=".setParallel($parallel$);" description="MatchTemplatesConfig.setParallel&#10;设置是否启用并行处理&#10;&#10;@param parallel true表示启用并行处理，false表示禁用；null表示使用默认设置" toReformat="false" toShortenFQNames="true">
+		<variable name="parallel" expression="" defaultValue="&quot;parallel&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getVariables(com.m8test.script.core.api.engine.ScriptContext);" value=".getVariables($scriptContext$);" description="OpencvComponent.getVariables&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="scriptContext" expression="" defaultValue="&quot;scriptContext&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.addClassLoader(dalvik.system.BaseDexClassLoader);" value=".addClassLoader($classLoader$);" description="OpencvComponent.addClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoader" expression="" defaultValue="&quot;classLoader&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.addClassLoader(kotlin.Function1);" value=".addClassLoader($classLoaderConfig$);" description="OpencvComponent.addClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.addDependency(kotlin.Function1);" value=".addDependency($dependency$);" description="OpencvComponent.addDependency&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="dependency" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.configureClassLoader(kotlin.Function1);" value=".configureClassLoader($classLoaderConfig$);" description="OpencvComponent.configureClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.configureClassLoader(dalvik.system.BaseDexClassLoader, kotlin.Function1);" value=".configureClassLoader($dexClassLoader$, $classLoaderConfig$);" description="OpencvComponent.configureClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="dexClassLoader" expression="" defaultValue="&quot;dexClassLoader&quot;" alwaysStopAt="true"/>
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.createClassLoader(kotlin.Function1);" value=".createClassLoader($classLoaderConfig$);" description="OpencvComponent.createClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoaderConfig" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getApplication();" value=".getApplication();" description="OpencvComponent.getApplication&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getClassLoader();" value=".getClassLoader();" description="OpencvComponent.getClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getClassLoaders();" value=".getClassLoaders();" description="OpencvComponent.getClassLoaders&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getFilesDir();" value=".getFilesDir();" description="OpencvComponent.getFilesDir&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getName();" value=".getName();" description="OpencvComponent.getName&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getPackageInfo();" value=".getPackageInfo();" description="OpencvComponent.getPackageInfo&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getPluginInfo();" value=".getPluginInfo();" description="OpencvComponent.getPluginInfo&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getResources();" value=".getResources();" description="OpencvComponent.getResources&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.getSettings();" value=".getSettings();" description="OpencvComponent.getSettings&#10;" toReformat="false" toShortenFQNames="true">
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.loadClass(kotlin.String);" value=".loadClass($className$);" description="OpencvComponent.loadClass&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="className" expression="" defaultValue="&quot;className&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.registerUICreator(com.m8test.script.core.api.ui.UICreator);" value=".registerUICreator($uiCreator$);" description="OpencvComponent.registerUICreator&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="uiCreator" expression="" defaultValue="&quot;uiCreator&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.removeClassLoader(dalvik.system.BaseDexClassLoader);" value=".removeClassLoader($classLoader$);" description="OpencvComponent.removeClassLoader&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="classLoader" expression="" defaultValue="&quot;classLoader&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.removeDependency(kotlin.Function1);" value=".removeDependency($dependency$);" description="OpencvComponent.removeDependency&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="dependency" expression="" defaultValue="                                    &quot;new Function1() { 
+    public Object invoke(Object v1){
+                                
+        return null;
+    }
+}&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+	<template name=".M8TestOpencvComponent.unregisterUICreator(com.m8test.script.core.api.ui.UICreator);" value=".unregisterUICreator($uiCreator$);" description="OpencvComponent.unregisterUICreator&#10;" toReformat="false" toShortenFQNames="true">
+		<variable name="uiCreator" expression="" defaultValue="&quot;uiCreator&quot;" alwaysStopAt="true"/>
+		<context>
+			<option name="JAVA CODE" value="true"/>
+		</context>
+	</template>
+</templateSet>

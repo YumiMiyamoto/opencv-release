@@ -1,0 +1,443 @@
+{
+  "Colors.getColorHex(kotlin.String, kotlin.Int, kotlin.Int)": {
+    "description": "获取图像中指定坐标的颜色十六进制值。\n从指定图像文件的(x,y)坐标提取像素颜色，并转换为标准化的十六进制字符串格式。 适用于需要精确获取图像中特定点颜色的场景。\n\n@param image 图像文件路径，支持常见格式（如PNG、JPEG等）\n@param x 目标像素的横坐标（像素单位，从左向右递增）\n@param y 目标像素的纵坐标（像素单位，从上向下递增）\n@return 颜色的十六进制字符串：     - 不包含透明度时：\"#RRGGBB\"（如\"#FF0080\"）     - 包含透明度时：\"#AARRGGBB\"（如\"#80FF0080\"）Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当图像路径无效、坐标超出图像范围时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当图像文件无法读取时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.io.IOException, exceptionAddress\u003djava.io/IOException///PointingToDeclaration/)",
+    "prefix": "Colors.getColorHex(kotlin.String, kotlin.Int, kotlin.Int)",
+    "body": "_colors.getColorHex(image, x, y)",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsgetColorHex(kotlinString, kotlinInt, kotlinInt)"
+  },
+  "Colors.getColorHexInDisplay(kotlin.Int, kotlin.Int, kotlin.Int)": {
+    "description": "获取屏幕中指定坐标的颜色十六进制值（自动申请权限）。\n实时获取屏幕指定位置的像素颜色，自动处理屏幕截图权限申请，适用于界面元素颜色验证。\n\n@param displayId 屏幕标识符：     - 0 表示物理屏幕的镜像     - 其他值表示对应的虚拟屏幕\n@param x 目标像素的横坐标（基于屏幕分辨率，从左向右递增）\n@param y 目标像素的纵坐标（基于屏幕分辨率，从上向下递增）\n@return 颜色的十六进制字符串：     - 不包含透明度时：\"#RRGGBB\"     - 包含透明度时：\"#AARRGGBB\"Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当屏幕ID无效或坐标超出屏幕范围时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当屏幕截图权限申请失败时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)",
+    "prefix": "Colors.getColorHexInDisplay(kotlin.Int, kotlin.Int, kotlin.Int)",
+    "body": "_colors.getColorHexInDisplay(displayId, x, y)",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsgetColorHexInDisplay(kotlinInt, kotlinInt, kotlinInt)"
+  },
+  "Colors.isSimilar(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean)": {
+    "description": "判断两个颜色是否达到指定相似度。\n使用指定算法比较两种颜色的相似度，并判断是否满足设定的阈值要求。 支持多种颜色格式输入和比较策略，满足不同场景的精度需求。\n\n@param color1 待比较的第一个颜色，支持格式：     - RGB：0x969696、#969696、969696     - ARGB：0xee969696（包含透明度通道）\n@param color2 待比较的第二个颜色，支持格式同上\n@param similarity 相似度阈值（范围0-100）：     - 0表示最宽松（允许任何颜色）     - 100表示最严格（要求完全匹配）     null时使用默认阈值（通常为90）\n@param algorithm 比较算法，支持以下值：     - \"equal\": 完全相等匹配（仅当两个颜色完全相同时返回true）     - \"diff\": 基于颜色差值的比较     - \"rgb\": 分别比较RGB三个通道的差异     - \"rgb+\": 增强型RGB比较（考虑人眼对不同颜色的敏感度）     - \"hs\": 基于色相和饱和度的比较     null时使用默认算法（通常为\"rgb+\"）\n@param ignoreAlpha 是否忽略透明度通道：     - true: 仅比较RGB通道     - false: 同时比较ARGB四个通道     null时默认值为true\n@return true表示两个颜色的相似度达到或超过阈值，false则表示未达到Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当颜色格式无效、算法不支持或相似度超出范围时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "prefix": "Colors.isSimilar(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean)",
+    "body": "_colors.isSimilar(color1, color2, similarity, algorithm, ignoreAlpha)",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsisSimilar(kotlinString, kotlinString, kotlinInt, kotlinString, kotlinBoolean)"
+  },
+  "Colors.getSimilarity(kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)": {
+    "description": "计算两个颜色的相似度得分。\n使用指定算法量化两个颜色的相似程度，返回0-100的得分，值越高表示颜色越相似。 适用于需要知道具体相似程度而非简单判断是否匹配的场景。\n\n@param color1 待比较的第一个颜色，支持格式同isSimilar方法\n@param color2 待比较的第二个颜色，支持格式同isSimilar方法\n@param algorithm 比较算法，支持值同isSimilar方法，null使用默认算法\n@param ignoreAlpha 是否忽略透明度通道，规则同isSimilar方法，null默认true\n@return 相似度得分（0-100）：     - 100表示完全相同     - 0表示差异最大Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当颜色格式无效或算法不支持时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "prefix": "Colors.getSimilarity(kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)",
+    "body": "_colors.getSimilarity(color1, color2, algorithm, ignoreAlpha)",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsgetSimilarity(kotlinString, kotlinString, kotlinString, kotlinBoolean)"
+  },
+  "Colors.getGlobalName()": {
+    "description": "",
+    "prefix": "Colors.getGlobalName()",
+    "body": "_colors.getGlobalName()",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsgetGlobalName()"
+  },
+  "Colors.getPublicType()": {
+    "description": "",
+    "prefix": "Colors.getPublicType()",
+    "body": "_colors.getPublicType()",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsgetPublicType()"
+  },
+  "Colors.isPrefixRequired()": {
+    "description": "",
+    "prefix": "Colors.isPrefixRequired()",
+    "body": "_colors.isPrefixRequired()",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsisPrefixRequired()"
+  },
+  "Colors.isSuffixRequired()": {
+    "description": "",
+    "prefix": "Colors.isSuffixRequired()",
+    "body": "_colors.isSuffixRequired()",
+    "scope": "python",
+    "prefixWithoutCallString": "ColorsisSuffixRequired()"
+  },
+  "M8TestCoordinateResult.M8TestCoordinateResult.getCoordinate()": {
+    "description": "CoordinateResult.getCoordinate\n获取坐标\n\n@return 坐标",
+    "prefix": ".M8TestCoordinateResult.getCoordinate()",
+    "body": ".getCoordinate()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestCoordinateResultgetCoordinate()"
+  },
+  "M8TestCoordinateResult.M8TestCoordinateResult.getSimilarity()": {
+    "description": "CoordinateResult.getSimilarity\n获取匹配结果的相似度\n\n@return 匹配结果的相似度",
+    "prefix": ".M8TestCoordinateResult.getSimilarity()",
+    "body": ".getSimilarity()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestCoordinateResultgetSimilarity()"
+  },
+  "Images.captureDisplay(kotlin.Int, kotlin.String)": {
+    "description": "捕获指定屏幕并保存为图像文件。\n该方法会截取指定屏幕的完整内容，并保存到指定路径。如果目标文件已存在， 会先删除原有文件再写入新内容。适用于获取当前屏幕状态作为操作依据或证据。\n\n@param displayId 屏幕标识符：     - 0 表示物理屏幕的镜像     - 其他值表示对应的虚拟屏幕\n@param outputPath 图像保存路径，需包含文件名及扩展名（如 \"/sdcard/screen.png\"）Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当应用缺乏屏幕截图权限或文件写入权限时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当输出路径无效或屏幕ID不存在时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "prefix": "Images.captureDisplay(kotlin.Int, kotlin.String)",
+    "body": "_images.captureDisplay(displayId, outputPath)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagescaptureDisplay(kotlinInt, kotlinString)"
+  },
+  "Images.crop(kotlin.String, kotlin.String, kotlin.Function1)": {
+    "description": "裁剪图像文件的指定区域并保存。\n从指定的源图像中裁剪由regionBuilder定义的矩形区域，将结果保存到目标路径。 适用于提取图像中的特定部分进行后续分析。\n\n@param srcPath 源图像文件路径，必须是可读取的本地图像文件\n@param outputPath 裁剪结果保存路径，若文件已存在会被覆盖\n@param regionBuilder 用于定义裁剪区域的lambda表达式，通过操作Rect对象设置区域坐标Receiver(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d待构建的矩形对象，通过设置left、top、right、bottom属性定义裁剪区域, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE))Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当源文件不存在、路径无效或区域设置不合法时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当文件读写过程中发生错误时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dIOException, exceptionAddress\u003dnull)",
+    "prefix": "Images.crop(kotlin.String, kotlin.String, kotlin.Function1)",
+    "body": "def regionBuilder(v1): \n    pass\n_images.crop(srcPath, outputPath, regionBuilder)",
+    "scope": "python",
+    "prefixWithoutCallString": "Imagescrop(kotlinString, kotlinString, kotlinFunction1)"
+  },
+  "Images.cropInDisplay(kotlin.Int, kotlin.String, kotlin.Function1)": {
+    "description": "裁剪屏幕指定区域并保存为图像文件（自动申请权限）。\n结合屏幕截图与区域裁剪功能，直接从指定屏幕截取矩形区域并保存。适用于快速获取 屏幕特定区域的图像，如控件截图、验证码区域等。\n\n@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕\n@param outputPath 裁剪结果保存路径，若文件已存在会被覆盖\n@param regionBuilder 用于定义裁剪区域的lambda表达式，坐标基于屏幕分辨率Receiver(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d待构建的矩形对象，通过设置left、top、right、bottom属性定义裁剪区域, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE))Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当自动申请权限失败时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当路径无效、屏幕ID不存在或区域设置不合法时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)",
+    "prefix": "Images.cropInDisplay(kotlin.Int, kotlin.String, kotlin.Function1)",
+    "body": "def regionBuilder(v1): \n    pass\n_images.cropInDisplay(displayId, outputPath, regionBuilder)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagescropInDisplay(kotlinInt, kotlinString, kotlinFunction1)"
+  },
+  "Images.matchTemplates(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)": {
+    "description": "在图像中查找匹配的模板（多目标支持）。\n从源图像中搜索与模板图像相似的所有区域，返回按相似度降序排列的匹配结果。 适用于在大图中定位小图元素，如在界面截图中查找按钮、图标等。\n\n@param srcPath 源图像文件路径（大图），作为搜索范围\n@param templatePath 模板图像文件路径（小图），作为搜索目标\n@param similarity 匹配相似度阈值（0-100），值越高匹配要求越严格；null使用默认值\n@param limit 最大返回结果数量，null表示无限制\n@param config 配置构建器，用于设置高级匹配参数\n@return 包含所有匹配区域的Results对象，每个结果包含区域坐标和相似度Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当相似度超出范围、文件路径无效或图像无法解析时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)See(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d了解更多配置选项, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dcom.m8test.image.api.config.MatchTemplatesConfig, address\u003dcom.m8test.image.api.config/MatchTemplatesConfig///PointingToDeclaration/)",
+    "prefix": "Images.matchTemplates(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)",
+    "body": "def config(v1): \n    pass\n_images.matchTemplates(srcPath, templatePath, similarity, limit, config)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesmatchTemplates(kotlinString, kotlinString, kotlinInt, kotlinInt, kotlinFunction1)"
+  },
+  "Images.matchTemplatesInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)": {
+    "description": "在屏幕中查找匹配的模板（自动申请权限）。\n结合屏幕截图与模板匹配功能，直接在指定屏幕中搜索与模板相似的区域。 适用于界面元素定位、自动化操作等场景。\n\n@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕\n@param templatePath 模板图像文件路径（小图），作为搜索目标\n@param similarity 匹配相似度阈值（0-100），值越高匹配要求越严格；null使用默认值\n@param limit 最大返回结果数量，null表示无限制\n@param config 配置构建器，用于设置高级匹配参数\n@return 包含所有匹配区域的Results对象，每个结果包含区域坐标和相似度Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当相似度超出范围、文件路径无效或屏幕ID不存在时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当自动申请权限失败时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)See(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d了解更多配置选项, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dcom.m8test.image.api.config.MatchTemplatesConfig, address\u003dcom.m8test.image.api.config/MatchTemplatesConfig///PointingToDeclaration/)",
+    "prefix": "Images.matchTemplatesInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)",
+    "body": "def config(v1): \n    pass\n_images.matchTemplatesInDisplay(displayId, templatePath, similarity, limit, config)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesmatchTemplatesInDisplay(kotlinInt, kotlinString, kotlinInt, kotlinInt, kotlinFunction1)"
+  },
+  "Images.compareColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1)": {
+    "description": "比较图像中指定坐标的颜色是否匹配目标颜色。\n支持两种匹配模式：\nOl(children\u003d[Li(children\u003d[P(children\u003d[Text(body\u003d当配置中colors为空时，仅比较(x,y)坐标颜色与firstColor的相似度, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}), Li(children\u003d[P(children\u003d[Text(body\u003d当配置中colors不为空时，同时比较主坐标及偏移点的颜色是否匹配, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{})], params\u003d{start\u003d1})\n适用于验证像素级颜色信息，如状态指示、颜色标识等场景。\n\n@param imagePath 待分析的图像文件路径\n@param firstColor 目标主颜色，支持格式：     - RGB: 0x969696、#969696、969696     - ARGB: 0xee969696（包含透明度）\n@param x 主坐标的横坐标（像素单位）\n@param y 主坐标的纵坐标（像素单位）\n@param similarity 主颜色相似度阈值（0-100），null使用默认值\n@param config 颜色比较配置构建器\n@return true表示所有指定坐标的颜色均匹配，false表示存在不匹配Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当参数无效、颜色格式错误或算法不支持时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)See(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d了解更多配置选项, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dcom.m8test.image.api.config.CompareColorsConfig, address\u003dcom.m8test.image.api.config/CompareColorsConfig///PointingToDeclaration/)",
+    "prefix": "Images.compareColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1)",
+    "body": "def config(v1): \n    pass\n_images.compareColors(imagePath, firstColor, x, y, similarity, config)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagescompareColors(kotlinString, kotlinString, kotlinInt, kotlinInt, kotlinInt, kotlinFunction1)"
+  },
+  "Images.compareColorsInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1)": {
+    "description": "比较屏幕中指定坐标的颜色是否匹配目标颜色（自动申请权限）。\n直接从屏幕获取指定坐标的颜色信息进行比较，支持主坐标及偏移点的多颜色验证， 适用于实时验证屏幕元素的颜色状态。\n\n@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕\n@param firstColor 目标主颜色，支持RGB和ARGB格式（同compareColors方法）\n@param x 主坐标的横坐标（基于屏幕分辨率）\n@param y 主坐标的纵坐标（基于屏幕分辨率）\n@param similarity 主颜色相似度阈值（0-100），null使用默认值\n@param config 颜色比较配置构建器\n@return true表示所有指定坐标的颜色均匹配，false表示存在不匹配Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当参数无效、颜色格式错误或算法不支持时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当自动申请权限失败时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)See(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d了解更多配置选项, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dcom.m8test.image.api.config.CompareColorsConfig, address\u003dcom.m8test.image.api.config/CompareColorsConfig///PointingToDeclaration/)",
+    "prefix": "Images.compareColorsInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function1)",
+    "body": "def config(v1): \n    pass\n_images.compareColorsInDisplay(displayId, firstColor, x, y, similarity, config)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagescompareColorsInDisplay(kotlinInt, kotlinString, kotlinInt, kotlinInt, kotlinInt, kotlinFunction1)"
+  },
+  "Images.findColorsInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)": {
+    "description": "在屏幕中查找匹配指定颜色的所有点（自动申请权限）。\n扫描指定屏幕，返回所有与目标颜色相似的坐标点，按相似度降序排列。 适用于查找特定颜色的元素分布，如地图标记、数据可视化点等。\n\n@param displayId 屏幕标识符：0表示物理屏幕镜像，其他值表示虚拟屏幕\n@param firstColor 目标主颜色，支持RGB和ARGB格式\n@param similarity 颜色相似度阈值（0-100），null使用默认值\n@param limit 最大返回结果数量，null表示无限制\n@param config 颜色查找配置构建器\n@return 包含匹配坐标的Results对象，每个结果包含坐标和相似度Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当参数无效或颜色格式错误时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当自动申请权限失败时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)See(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d了解更多配置选项, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dcom.m8test.image.api.config.FindColorsConfig, address\u003dcom.m8test.image.api.config/FindColorsConfig///PointingToDeclaration/)",
+    "prefix": "Images.findColorsInDisplay(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)",
+    "body": "def config(v1): \n    pass\n_images.findColorsInDisplay(displayId, firstColor, similarity, limit, config)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesfindColorsInDisplay(kotlinInt, kotlinString, kotlinInt, kotlinInt, kotlinFunction1)"
+  },
+  "Images.findColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)": {
+    "description": "在图像中查找匹配指定颜色的所有点。\n扫描指定图像文件，返回所有与目标颜色相似的坐标点，按相似度降序排列。 适用于图像分析、颜色分布统计等场景。\n\n@param imagePath 待分析的图像文件路径\n@param firstColor 目标主颜色，支持RGB和ARGB格式\n@param similarity 颜色相似度阈值（0-100），null使用默认值\n@param limit 最大返回结果数量，null表示无限制\n@param config 颜色查找配置构建器\n@return 包含匹配坐标的Results对象，每个结果包含坐标和相似度Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当参数无效、颜色格式错误或文件无法读取时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)See(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d了解更多配置选项, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dcom.m8test.image.api.config.FindColorsConfig, address\u003dcom.m8test.image.api.config/FindColorsConfig///PointingToDeclaration/)",
+    "prefix": "Images.findColors(kotlin.String, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Function1)",
+    "body": "def config(v1): \n    pass\n_images.findColors(imagePath, firstColor, similarity, limit, config)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesfindColors(kotlinString, kotlinString, kotlinInt, kotlinInt, kotlinFunction1)"
+  },
+  "Images.getSize(kotlin.String)": {
+    "description": "高效获取图像文件的尺寸信息（不加载完整像素数据）。\n通过解析图像文件头部信息获取宽高，避免加载整个图像到内存，适用于预处理阶段的 尺寸判断、比例计算等场景，尤其对大尺寸图像性能优势明显。\n\n@param imagePath 待获取尺寸的图像文件路径（支持JPEG、PNG等常见格式）\n@return Size对象，包含图像的宽度（width）和高度（height），单位为像素Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当路径为空、文件不存在或格式不支持时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003dkotlin.IllegalArgumentException, exceptionAddress\u003dkotlin/IllegalArgumentException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d当应用缺乏文件读取权限时抛出, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.SecurityException, exceptionAddress\u003djava.lang/SecurityException///PointingToDeclaration/)Throws(root\u003dCustomDocTag(children\u003d[P(children\u003d[Text(body\u003d极端情况下解析元数据时发生内存不足, children\u003d[], params\u003d{})], params\u003d{})], params\u003d{}, name\u003dMARKDOWN_FILE), name\u003djava.lang.OutOfMemoryError, exceptionAddress\u003djava.lang/OutOfMemoryError///PointingToDeclaration/)",
+    "prefix": "Images.getSize(kotlin.String)",
+    "body": "_images.getSize(imagePath)",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesgetSize(kotlinString)"
+  },
+  "Images.getGlobalName()": {
+    "description": "",
+    "prefix": "Images.getGlobalName()",
+    "body": "_images.getGlobalName()",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesgetGlobalName()"
+  },
+  "Images.getPublicType()": {
+    "description": "",
+    "prefix": "Images.getPublicType()",
+    "body": "_images.getPublicType()",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesgetPublicType()"
+  },
+  "Images.isPrefixRequired()": {
+    "description": "",
+    "prefix": "Images.isPrefixRequired()",
+    "body": "_images.isPrefixRequired()",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesisPrefixRequired()"
+  },
+  "Images.isSuffixRequired()": {
+    "description": "",
+    "prefix": "Images.isSuffixRequired()",
+    "body": "_images.isSuffixRequired()",
+    "scope": "python",
+    "prefixWithoutCallString": "ImagesisSuffixRequired()"
+  },
+  "M8TestRegionResult.M8TestRegionResult.getRegion()": {
+    "description": "RegionResult.getRegion\n获取匹配结果的区域\n\n@return 匹配结果的区域",
+    "prefix": ".M8TestRegionResult.getRegion()",
+    "body": ".getRegion()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestRegionResultgetRegion()"
+  },
+  "M8TestRegionResult.M8TestRegionResult.getSimilarity()": {
+    "description": "RegionResult.getSimilarity\n获取匹配结果的相似度\n\n@return 匹配结果的相似度",
+    "prefix": ".M8TestRegionResult.getSimilarity()",
+    "body": ".getSimilarity()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestRegionResultgetSimilarity()"
+  },
+  "M8TestResult.M8TestResult.getSimilarity()": {
+    "description": "Result.getSimilarity\n获取匹配结果的相似度\n\n@return 匹配结果的相似度",
+    "prefix": ".M8TestResult.getSimilarity()",
+    "body": ".getSimilarity()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestResultgetSimilarity()"
+  },
+  "M8TestResults.M8TestResults.getAll()": {
+    "description": "Results.getAll\n获取集合中的所有结果.\n\n@return 集合中的所有结果",
+    "prefix": ".M8TestResults.getAll()",
+    "body": ".getAll()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestResultsgetAll()"
+  },
+  "M8TestResults.M8TestResults.getBest()": {
+    "description": "Results.getBest\n获取相似度最高的匹配结果\n\n@return 相似度最高的匹配结果",
+    "prefix": ".M8TestResults.getBest()",
+    "body": ".getBest()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestResultsgetBest()"
+  },
+  "M8TestCompareColorsConfig.M8TestCompareColorsConfig.setRegion(kotlin.Function1)": {
+    "description": "CompareColorsConfig.setRegion\n设置区域构建器\n\n@param region 用于构建比较区域的lambda表达式，通过Rect的扩展函数定义比较区域；     null表示在整个图像范围内进行比较",
+    "prefix": ".M8TestCompareColorsConfig.setRegion(kotlin.Function1)",
+    "body": "def region(v1): \n    pass\n.setRegion(region)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestCompareColorsConfigsetRegion(kotlinFunction1)"
+  },
+  "M8TestCompareColorsConfig.M8TestCompareColorsConfig.setColors(kotlin.String)": {
+    "description": "CompareColorsConfig.setColors\n设置颜色偏移字符串\n\n@param colors 颜色偏移字符串，格式示例：\"6|1|0x969696|90,1|12|0xee969696|95,-4|0|#969696\"；     格式说明：每个偏移点由\"x偏移|y偏移|颜色值|相似度\"组成，多个点用逗号分隔；     null或空表示仅比较主坐标颜色",
+    "prefix": ".M8TestCompareColorsConfig.setColors(kotlin.String)",
+    "body": ".setColors(colors)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestCompareColorsConfigsetColors(kotlinString)"
+  },
+  "M8TestCompareColorsConfig.M8TestCompareColorsConfig.setAlgorithm(kotlin.String)": {
+    "description": "CompareColorsConfig.setAlgorithm\n设置颜色匹配算法\n\n@param algorithm 匹配算法标识，支持以下值：     - \"equal\": 完全相等匹配     - \"diff\": 差值比较     - \"rgb\": RGB通道分别比较     - \"rgb+\": 增强型RGB比较     - \"hs\": 色相饱和度比较     null表示使用默认算法",
+    "prefix": ".M8TestCompareColorsConfig.setAlgorithm(kotlin.String)",
+    "body": ".setAlgorithm(algorithm)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestCompareColorsConfigsetAlgorithm(kotlinString)"
+  },
+  "M8TestCompareColorsConfig.M8TestCompareColorsConfig.setIgnoreAlpha(kotlin.Boolean)": {
+    "description": "CompareColorsConfig.setIgnoreAlpha\n设置是否忽略透明度比较的标志\n\n@param ignoreAlpha true表示忽略透明度进行比较，false表示包含透明度比较；     null表示使用默认设置（默认值为true）",
+    "prefix": ".M8TestCompareColorsConfig.setIgnoreAlpha(kotlin.Boolean)",
+    "body": ".setIgnoreAlpha(ignoreAlpha)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestCompareColorsConfigsetIgnoreAlpha(kotlinBoolean)"
+  },
+  "M8TestFindColorsConfig.M8TestFindColorsConfig.setRegion(kotlin.Function1)": {
+    "description": "FindColorsConfig.setRegion\n设置查找区域构建函数\n该函数用于定义颜色查找的区域范围\n\n@param builder 区域构建函数，为null时查找整个图像",
+    "prefix": ".M8TestFindColorsConfig.setRegion(kotlin.Function1)",
+    "body": "def builder(v1): \n    pass\n.setRegion(builder)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestFindColorsConfigsetRegion(kotlinFunction1)"
+  },
+  "M8TestFindColorsConfig.M8TestFindColorsConfig.setColors(kotlin.String)": {
+    "description": "FindColorsConfig.setColors\n设置颜色偏移字符串\n格式如 \"6|1|0x969696|90,1|12|0xee969696|95\"，用于定义除主颜色外的其他匹配颜色\n\n@param colors 颜色偏移字符串，为null表示不使用偏移颜色",
+    "prefix": ".M8TestFindColorsConfig.setColors(kotlin.String)",
+    "body": ".setColors(colors)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestFindColorsConfigsetColors(kotlinString)"
+  },
+  "M8TestFindColorsConfig.M8TestFindColorsConfig.setAlgorithm(kotlin.String)": {
+    "description": "FindColorsConfig.setAlgorithm\n设置匹配算法\n支持的算法包括：equal、diff、rgb、rgb+、hs\n\n@param algorithm 匹配算法名称，为null时使用默认算法",
+    "prefix": ".M8TestFindColorsConfig.setAlgorithm(kotlin.String)",
+    "body": ".setAlgorithm(algorithm)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestFindColorsConfigsetAlgorithm(kotlinString)"
+  },
+  "M8TestFindColorsConfig.M8TestFindColorsConfig.setDirection(kotlin.Int)": {
+    "description": "FindColorsConfig.setDirection\n设置搜索方向\n定义图像中颜色查找的扫描方向\n\n@param direction 搜索方向标识，为null时使用默认方向",
+    "prefix": ".M8TestFindColorsConfig.setDirection(kotlin.Int)",
+    "body": ".setDirection(direction)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestFindColorsConfigsetDirection(kotlinInt)"
+  },
+  "M8TestFindColorsConfig.M8TestFindColorsConfig.setIgnoreAlpha(kotlin.Boolean)": {
+    "description": "FindColorsConfig.setIgnoreAlpha\n设置是否忽略透明度比较\n\n@param ignore true表示忽略透明度，false表示考虑透明度，为null时使用默认设置",
+    "prefix": ".M8TestFindColorsConfig.setIgnoreAlpha(kotlin.Boolean)",
+    "body": ".setIgnoreAlpha(ignore)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestFindColorsConfigsetIgnoreAlpha(kotlinBoolean)"
+  },
+  "M8TestMatchTemplatesConfig.M8TestMatchTemplatesConfig.setRegion(kotlin.Function1)": {
+    "description": "MatchTemplatesConfig.setRegion\n设置区域构建器\n\n@param region 用于构建匹配区域的lambda表达式，通过Rect的扩展函数定义匹配区域；     null表示在整个图像范围内查找",
+    "prefix": ".M8TestMatchTemplatesConfig.setRegion(kotlin.Function1)",
+    "body": "def region(v1): \n    pass\n.setRegion(region)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestMatchTemplatesConfigsetRegion(kotlinFunction1)"
+  },
+  "M8TestMatchTemplatesConfig.M8TestMatchTemplatesConfig.setOutputPath(kotlin.String)": {
+    "description": "MatchTemplatesConfig.setOutputPath\n设置匹配结果图像输出路径\n\n@param outputPath 结果图像保存路径；null表示不保存结果图像",
+    "prefix": ".M8TestMatchTemplatesConfig.setOutputPath(kotlin.String)",
+    "body": ".setOutputPath(outputPath)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestMatchTemplatesConfigsetOutputPath(kotlinString)"
+  },
+  "M8TestMatchTemplatesConfig.M8TestMatchTemplatesConfig.setMethod(kotlin.Int)": {
+    "description": "MatchTemplatesConfig.setMethod\n设置模板匹配方法\n\n@param method 匹配算法方法标识；null表示使用默认匹配方法",
+    "prefix": ".M8TestMatchTemplatesConfig.setMethod(kotlin.Int)",
+    "body": ".setMethod(method)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestMatchTemplatesConfigsetMethod(kotlinInt)"
+  },
+  "M8TestMatchTemplatesConfig.M8TestMatchTemplatesConfig.setParallel(kotlin.Boolean)": {
+    "description": "MatchTemplatesConfig.setParallel\n设置是否启用并行处理\n\n@param parallel true表示启用并行处理，false表示禁用；null表示使用默认设置",
+    "prefix": ".M8TestMatchTemplatesConfig.setParallel(kotlin.Boolean)",
+    "body": ".setParallel(parallel)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestMatchTemplatesConfigsetParallel(kotlinBoolean)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getVariables(com.m8test.script.core.api.engine.ScriptContext)": {
+    "description": "OpencvComponent.getVariables\n",
+    "prefix": ".M8TestOpencvComponent.getVariables(com.m8test.script.core.api.engine.ScriptContext)",
+    "body": ".getVariables(scriptContext)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetVariables(comm8testscriptcoreapiengineScriptContext)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.addClassLoader(dalvik.system.BaseDexClassLoader)": {
+    "description": "OpencvComponent.addClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.addClassLoader(dalvik.system.BaseDexClassLoader)",
+    "body": ".addClassLoader(classLoader)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentaddClassLoader(dalviksystemBaseDexClassLoader)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.addClassLoader(kotlin.Function1)": {
+    "description": "OpencvComponent.addClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.addClassLoader(kotlin.Function1)",
+    "body": "def classLoaderConfig(v1): \n    pass\n.addClassLoader(classLoaderConfig)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentaddClassLoader(kotlinFunction1)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.addDependency(kotlin.Function1)": {
+    "description": "OpencvComponent.addDependency\n",
+    "prefix": ".M8TestOpencvComponent.addDependency(kotlin.Function1)",
+    "body": "def dependency(v1): \n    pass\n.addDependency(dependency)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentaddDependency(kotlinFunction1)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.configureClassLoader(kotlin.Function1)": {
+    "description": "OpencvComponent.configureClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.configureClassLoader(kotlin.Function1)",
+    "body": "def classLoaderConfig(v1): \n    pass\n.configureClassLoader(classLoaderConfig)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentconfigureClassLoader(kotlinFunction1)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.configureClassLoader(dalvik.system.BaseDexClassLoader, kotlin.Function1)": {
+    "description": "OpencvComponent.configureClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.configureClassLoader(dalvik.system.BaseDexClassLoader, kotlin.Function1)",
+    "body": "def classLoaderConfig(v1): \n    pass\n.configureClassLoader(dexClassLoader, classLoaderConfig)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentconfigureClassLoader(dalviksystemBaseDexClassLoader, kotlinFunction1)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.createClassLoader(kotlin.Function1)": {
+    "description": "OpencvComponent.createClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.createClassLoader(kotlin.Function1)",
+    "body": "def classLoaderConfig(v1): \n    pass\n.createClassLoader(classLoaderConfig)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentcreateClassLoader(kotlinFunction1)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getApplication()": {
+    "description": "OpencvComponent.getApplication\n",
+    "prefix": ".M8TestOpencvComponent.getApplication()",
+    "body": ".getApplication()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetApplication()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getClassLoader()": {
+    "description": "OpencvComponent.getClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.getClassLoader()",
+    "body": ".getClassLoader()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetClassLoader()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getClassLoaders()": {
+    "description": "OpencvComponent.getClassLoaders\n",
+    "prefix": ".M8TestOpencvComponent.getClassLoaders()",
+    "body": ".getClassLoaders()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetClassLoaders()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getFilesDir()": {
+    "description": "OpencvComponent.getFilesDir\n",
+    "prefix": ".M8TestOpencvComponent.getFilesDir()",
+    "body": ".getFilesDir()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetFilesDir()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getName()": {
+    "description": "OpencvComponent.getName\n",
+    "prefix": ".M8TestOpencvComponent.getName()",
+    "body": ".getName()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetName()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getPackageInfo()": {
+    "description": "OpencvComponent.getPackageInfo\n",
+    "prefix": ".M8TestOpencvComponent.getPackageInfo()",
+    "body": ".getPackageInfo()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetPackageInfo()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getPluginInfo()": {
+    "description": "OpencvComponent.getPluginInfo\n",
+    "prefix": ".M8TestOpencvComponent.getPluginInfo()",
+    "body": ".getPluginInfo()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetPluginInfo()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getResources()": {
+    "description": "OpencvComponent.getResources\n",
+    "prefix": ".M8TestOpencvComponent.getResources()",
+    "body": ".getResources()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetResources()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.getSettings()": {
+    "description": "OpencvComponent.getSettings\n",
+    "prefix": ".M8TestOpencvComponent.getSettings()",
+    "body": ".getSettings()",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentgetSettings()"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.loadClass(kotlin.String)": {
+    "description": "OpencvComponent.loadClass\n",
+    "prefix": ".M8TestOpencvComponent.loadClass(kotlin.String)",
+    "body": ".loadClass(className)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentloadClass(kotlinString)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.registerUICreator(com.m8test.script.core.api.ui.UICreator)": {
+    "description": "OpencvComponent.registerUICreator\n",
+    "prefix": ".M8TestOpencvComponent.registerUICreator(com.m8test.script.core.api.ui.UICreator)",
+    "body": ".registerUICreator(uiCreator)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentregisterUICreator(comm8testscriptcoreapiuiUICreator)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.removeClassLoader(dalvik.system.BaseDexClassLoader)": {
+    "description": "OpencvComponent.removeClassLoader\n",
+    "prefix": ".M8TestOpencvComponent.removeClassLoader(dalvik.system.BaseDexClassLoader)",
+    "body": ".removeClassLoader(classLoader)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentremoveClassLoader(dalviksystemBaseDexClassLoader)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.removeDependency(kotlin.Function1)": {
+    "description": "OpencvComponent.removeDependency\n",
+    "prefix": ".M8TestOpencvComponent.removeDependency(kotlin.Function1)",
+    "body": "def dependency(v1): \n    pass\n.removeDependency(dependency)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentremoveDependency(kotlinFunction1)"
+  },
+  "M8TestOpencvComponent.M8TestOpencvComponent.unregisterUICreator(com.m8test.script.core.api.ui.UICreator)": {
+    "description": "OpencvComponent.unregisterUICreator\n",
+    "prefix": ".M8TestOpencvComponent.unregisterUICreator(com.m8test.script.core.api.ui.UICreator)",
+    "body": ".unregisterUICreator(uiCreator)",
+    "scope": "python",
+    "prefixWithoutCallString": "M8TestOpencvComponentunregisterUICreator(comm8testscriptcoreapiuiUICreator)"
+  }
+}

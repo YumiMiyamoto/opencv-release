@@ -1,0 +1,56 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.m8test.image.api.config////PointingToDeclaration/image/com.m8test.image.api.config/index.html
+$dokka.location:com.m8test.image.api.config/CompareColorsConfig///PointingToDeclaration/image/com.m8test.image.api.config/-compare-colors-config/index.html
+$dokka.location:com.m8test.image.api.config/CompareColorsConfig/setAlgorithm/#kotlin.String?/PointingToDeclaration/image/com.m8test.image.api.config/-compare-colors-config/set-algorithm.html
+$dokka.location:com.m8test.image.api.config/CompareColorsConfig/setColors/#kotlin.String?/PointingToDeclaration/image/com.m8test.image.api.config/-compare-colors-config/set-colors.html
+$dokka.location:com.m8test.image.api.config/CompareColorsConfig/setIgnoreAlpha/#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api.config/-compare-colors-config/set-ignore-alpha.html
+$dokka.location:com.m8test.image.api.config/CompareColorsConfig/setRegion/#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?/PointingToDeclaration/image/com.m8test.image.api.config/-compare-colors-config/set-region.html
+$dokka.location:com.m8test.image.api.config/FindColorsConfig///PointingToDeclaration/image/com.m8test.image.api.config/-find-colors-config/index.html
+$dokka.location:com.m8test.image.api.config/FindColorsConfig/setAlgorithm/#kotlin.String?/PointingToDeclaration/image/com.m8test.image.api.config/-find-colors-config/set-algorithm.html
+$dokka.location:com.m8test.image.api.config/FindColorsConfig/setColors/#kotlin.String?/PointingToDeclaration/image/com.m8test.image.api.config/-find-colors-config/set-colors.html
+$dokka.location:com.m8test.image.api.config/FindColorsConfig/setDirection/#kotlin.Int?/PointingToDeclaration/image/com.m8test.image.api.config/-find-colors-config/set-direction.html
+$dokka.location:com.m8test.image.api.config/FindColorsConfig/setIgnoreAlpha/#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api.config/-find-colors-config/set-ignore-alpha.html
+$dokka.location:com.m8test.image.api.config/FindColorsConfig/setRegion/#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?/PointingToDeclaration/image/com.m8test.image.api.config/-find-colors-config/set-region.html
+$dokka.location:com.m8test.image.api.config/MatchTemplatesConfig///PointingToDeclaration/image/com.m8test.image.api.config/-match-templates-config/index.html
+$dokka.location:com.m8test.image.api.config/MatchTemplatesConfig/setMethod/#kotlin.Int?/PointingToDeclaration/image/com.m8test.image.api.config/-match-templates-config/set-method.html
+$dokka.location:com.m8test.image.api.config/MatchTemplatesConfig/setOutputPath/#kotlin.String?/PointingToDeclaration/image/com.m8test.image.api.config/-match-templates-config/set-output-path.html
+$dokka.location:com.m8test.image.api.config/MatchTemplatesConfig/setParallel/#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api.config/-match-templates-config/set-parallel.html
+$dokka.location:com.m8test.image.api.config/MatchTemplatesConfig/setRegion/#kotlin.Function1[android.graphics.Rect,kotlin.Unit]?/PointingToDeclaration/image/com.m8test.image.api.config/-match-templates-config/set-region.html
+$dokka.location:com.m8test.image.api////PointingToDeclaration/image/com.m8test.image.api/index.html
+$dokka.location:com.m8test.image.api/Colors///PointingToDeclaration/image/com.m8test.image.api/-colors/index.html
+$dokka.location:com.m8test.image.api/Colors/getColorHex/#kotlin.String#kotlin.Int#kotlin.Int/PointingToDeclaration/image/com.m8test.image.api/-colors/get-color-hex.html
+$dokka.location:com.m8test.image.api/Colors/getColorHexInDisplay/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/image/com.m8test.image.api/-colors/get-color-hex-in-display.html
+$dokka.location:com.m8test.image.api/Colors/getSimilarity/#kotlin.String#kotlin.String#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-colors/get-similarity.html
+$dokka.location:com.m8test.image.api/Colors/isSimilar/#kotlin.String#kotlin.String#kotlin.Int?#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/image/com.m8test.image.api/-colors/is-similar.html
+$dokka.location:com.m8test.image.api/CoordinateResult///PointingToDeclaration/image/com.m8test.image.api/-coordinate-result/index.html
+$dokka.location:com.m8test.image.api/CoordinateResult/getCoordinate/#/PointingToDeclaration/image/com.m8test.image.api/-coordinate-result/get-coordinate.html
+$dokka.location:com.m8test.image.api/Images///PointingToDeclaration/image/com.m8test.image.api/-images/index.html
+$dokka.location:com.m8test.image.api/Images/captureDisplay/#kotlin.Int#kotlin.String/PointingToDeclaration/image/com.m8test.image.api/-images/capture-display.html
+$dokka.location:com.m8test.image.api/Images/compareColors/#kotlin.String#kotlin.String#kotlin.Int#kotlin.Int#kotlin.Int?#kotlin.Function1[com.m8test.image.api.config.CompareColorsConfig,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/compare-colors.html
+$dokka.location:com.m8test.image.api/Images/compareColorsInDisplay/#kotlin.Int#kotlin.String#kotlin.Int#kotlin.Int#kotlin.Int?#kotlin.Function1[com.m8test.image.api.config.CompareColorsConfig,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/compare-colors-in-display.html
+$dokka.location:com.m8test.image.api/Images/crop/#kotlin.String#kotlin.String#kotlin.Function1[android.graphics.Rect,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/crop.html
+$dokka.location:com.m8test.image.api/Images/cropInDisplay/#kotlin.Int#kotlin.String#kotlin.Function1[android.graphics.Rect,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/crop-in-display.html
+$dokka.location:com.m8test.image.api/Images/findColors/#kotlin.String#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[com.m8test.image.api.config.FindColorsConfig,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/find-colors.html
+$dokka.location:com.m8test.image.api/Images/findColorsInDisplay/#kotlin.Int#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[com.m8test.image.api.config.FindColorsConfig,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/find-colors-in-display.html
+$dokka.location:com.m8test.image.api/Images/getSize/#kotlin.String/PointingToDeclaration/image/com.m8test.image.api/-images/get-size.html
+$dokka.location:com.m8test.image.api/Images/matchTemplates/#kotlin.String#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[com.m8test.image.api.config.MatchTemplatesConfig,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/match-templates.html
+$dokka.location:com.m8test.image.api/Images/matchTemplatesInDisplay/#kotlin.Int#kotlin.String#kotlin.Int?#kotlin.Int?#kotlin.Function1[com.m8test.image.api.config.MatchTemplatesConfig,kotlin.Unit]/PointingToDeclaration/image/com.m8test.image.api/-images/match-templates-in-display.html
+$dokka.location:com.m8test.image.api/RegionResult///PointingToDeclaration/image/com.m8test.image.api/-region-result/index.html
+$dokka.location:com.m8test.image.api/RegionResult/getRegion/#/PointingToDeclaration/image/com.m8test.image.api/-region-result/get-region.html
+$dokka.location:com.m8test.image.api/Result///PointingToDeclaration/image/com.m8test.image.api/-result/index.html
+$dokka.location:com.m8test.image.api/Result/getSimilarity/#/PointingToDeclaration/image/com.m8test.image.api/-result/get-similarity.html
+$dokka.location:com.m8test.image.api/Results///PointingToDeclaration/image/com.m8test.image.api/-results/index.html
+$dokka.location:com.m8test.image.api/Results/getAll/#/PointingToDeclaration/image/com.m8test.image.api/-results/get-all.html
+$dokka.location:com.m8test.image.api/Results/getBest/#/PointingToDeclaration/image/com.m8test.image.api/-results/get-best.html
+$dokka.location:com.m8test.opencv.impl.config////PointingToDeclaration/image/com.m8test.opencv.impl.config.html
+$dokka.location:com.m8test.opencv.impl////PointingToDeclaration/image/com.m8test.opencv.impl.html
+$dokka.location:com.m8test.opencv////PointingToDeclaration/image/com.m8test.opencv/index.html
+$dokka.location:com.m8test.opencv/OpencvComponent///PointingToDeclaration/image/com.m8test.opencv/-opencv-component/index.html
+$dokka.location:com.m8test.opencv/OpencvComponent/OpencvComponent/#com.m8test.plugin.api.ApkPluginProvider/PointingToDeclaration/image/com.m8test.opencv/-opencv-component/-opencv-component.html
+$dokka.location:com.m8test.opencv/OpencvComponent/getVariables/#com.m8test.script.core.api.engine.ScriptContext/PointingToDeclaration/image/com.m8test.opencv/-opencv-component/get-variables.html
+com.m8test.image.api
+com.m8test.image.api.config
+com.m8test.opencv
+com.m8test.opencv.impl
+com.m8test.opencv.impl.config

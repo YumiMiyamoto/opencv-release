@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OpencvComponent</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    image
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":image/staging">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":image/staging"
+                                       data-filter=":image/staging"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    image
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="image::com.m8test.opencv/OpencvComponent///PointingToDeclaration//-1600758392">
+  <div class="breadcrumbs"><a href="../../../index.html">image</a><span class="delimiter">/</span><a href="../index.html">com.m8test.opencv</a><span class="delimiter">/</span><span class="current">OpencvComponent</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Opencv</span><wbr></wbr><span><span>Component</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">OpencvComponent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apkPluginProvider<span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/ApkPluginProvider///PointingToDeclaration/">ApkPluginProvider</span></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.m8test.script.core.impl.component/AbstractComponent///PointingToDeclaration/">AbstractComponent</span></div><p class="paragraph">Description: image组件</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1652006253%2FConstructors%2F-1600758392" anchor-label="OpencvComponent" id="-1652006253%2FConstructors%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-opencv-component.html"><span>Opencv</span><wbr></wbr><span><span>Component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1652006253%2FConstructors%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apkPluginProvider<span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/ApkPluginProvider///PointingToDeclaration/">ApkPluginProvider</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-118373341%2FFunctions%2F-1600758392" anchor-label="addClassLoader" id="-118373341%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#979394616%2FFunctions%2F-1600758392"><span>add</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-118373341%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#979394616%2FFunctions%2F-1600758392"><span class="token function">addClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoader<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-776308657%2FFunctions%2F-1600758392"><span class="token function">addClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoaderConfig<span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/DexClassLoaderConfig///PointingToDeclaration/">DexClassLoaderConfig</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2102724844%2FFunctions%2F-1600758392" anchor-label="addDependency" id="2102724844%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2102724844%2FFunctions%2F-1600758392"><span>add</span><wbr></wbr><span><span>Dependency</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2102724844%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#2102724844%2FFunctions%2F-1600758392"><span class="token function">addDependency</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dependency<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.resource/WebResource///PointingToDeclaration/">WebResource</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test/Result///PointingToDeclaration/">Result</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="776475654%2FFunctions%2F-1600758392" anchor-label="configureClassLoader" id="776475654%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1789522924%2FFunctions%2F-1600758392"><span>configure</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="776475654%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1789522924%2FFunctions%2F-1600758392"><span class="token function">configureClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoaderConfig<span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/DexClassLoaderConfig///PointingToDeclaration/">DexClassLoaderConfig</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#900292698%2FFunctions%2F-1600758392"><span class="token function">configureClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dexClassLoader<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a><span class="token punctuation">, </span></span><span class="parameter ">classLoaderConfig<span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/DexClassLoaderConfig///PointingToDeclaration/">DexClassLoaderConfig</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="685271778%2FFunctions%2F-1600758392" anchor-label="createClassLoader" id="685271778%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#685271778%2FFunctions%2F-1600758392"><span>create</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="685271778%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#685271778%2FFunctions%2F-1600758392"><span class="token function">createClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoaderConfig<span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/DexClassLoaderConfig///PointingToDeclaration/">DexClassLoaderConfig</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1631977513%2FFunctions%2F-1600758392" anchor-label="getApplication" id="-1631977513%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1631977513%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span><span>Application</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631977513%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1631977513%2FFunctions%2F-1600758392"><span class="token function">getApplication</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1046720361%2FFunctions%2F-1600758392" anchor-label="getClassLoader" id="-1046720361%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1046720361%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1046720361%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1046720361%2FFunctions%2F-1600758392"><span class="token function">getClassLoader</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-516025861%2FFunctions%2F-1600758392" anchor-label="getClassLoaders" id="-516025861%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-516025861%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loaders</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516025861%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-516025861%2FFunctions%2F-1600758392"><span class="token function">getClassLoaders</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-922822472%2FFunctions%2F-1600758392" anchor-label="getFilesDir" id="-922822472%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-922822472%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span>Files</span><wbr></wbr><span><span>Dir</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-922822472%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-922822472%2FFunctions%2F-1600758392"><span class="token function">getFilesDir</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1727723805%2FFunctions%2F-1600758392" anchor-label="getName" id="-1727723805%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1727723805%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1727723805%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1727723805%2FFunctions%2F-1600758392"><span class="token function">getName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1513902189%2FFunctions%2F-1600758392" anchor-label="getPackageInfo" id="-1513902189%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1513902189%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span>Package</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1513902189%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1513902189%2FFunctions%2F-1600758392"><span class="token function">getPackageInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/pm/PackageInfo.html">PackageInfo</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-699020563%2FFunctions%2F-1600758392" anchor-label="getPluginInfo" id="-699020563%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-699020563%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span>Plugin</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-699020563%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-699020563%2FFunctions%2F-1600758392"><span class="token function">getPluginInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/PluggableApkPluginInfo///PointingToDeclaration/">PluggableApkPluginInfo</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1667153118%2FFunctions%2F-1600758392" anchor-label="getResources" id="-1667153118%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1667153118%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1667153118%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1667153118%2FFunctions%2F-1600758392"><span class="token function">getResources</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/res/Resources.html">Resources</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="838479819%2FFunctions%2F-1600758392" anchor-label="getSettings" id="838479819%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#838479819%2FFunctions%2F-1600758392"><span>get</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838479819%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#838479819%2FFunctions%2F-1600758392"><span class="token function">getSettings</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.plugin.api/PluggableApkPluginSettings///PointingToDeclaration/">PluggableApkPluginSettings</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1904849031%2FFunctions%2F-1600758392" anchor-label="getVariables" id="1904849031%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-variables.html"><span>get</span><wbr></wbr><span><span>Variables</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1904849031%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-variables.html"><span class="token function">getVariables</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scriptContext<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.engine/ScriptContext///PointingToDeclaration/">ScriptContext</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.component/Variable///PointingToDeclaration/">Variable</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1290079619%2FFunctions%2F-1600758392" anchor-label="loadClass" id="-1290079619%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1290079619%2FFunctions%2F-1600758392"><span>load</span><wbr></wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1290079619%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1290079619%2FFunctions%2F-1600758392"><span class="token function">loadClass</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">className<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1215693652%2FFunctions%2F-1600758392" anchor-label="registerUICreator" id="1215693652%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1215693652%2FFunctions%2F-1600758392"><span>register</span><wbr></wbr><span><span>UICreator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1215693652%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1215693652%2FFunctions%2F-1600758392"><span class="token function">registerUICreator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">uiCreator<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui/UICreator///PointingToDeclaration/">UICreator</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test/Result///PointingToDeclaration/">Result</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-904350381%2FFunctions%2F-1600758392" anchor-label="removeClassLoader" id="-904350381%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-904350381%2FFunctions%2F-1600758392"><span>remove</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-904350381%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-904350381%2FFunctions%2F-1600758392"><span class="token function">removeClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoader<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2086018153%2FFunctions%2F-1600758392" anchor-label="removeDependency" id="-2086018153%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-2086018153%2FFunctions%2F-1600758392"><span>remove</span><wbr></wbr><span><span>Dependency</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2086018153%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-2086018153%2FFunctions%2F-1600758392"><span class="token function">removeDependency</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dependency<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.resource/WebResource///PointingToDeclaration/">WebResource</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test/Result///PointingToDeclaration/">Result</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-26600741%2FFunctions%2F-1600758392" anchor-label="unregisterUICreator" id="-26600741%2FFunctions%2F-1600758392" data-filterable-set=":image/staging"></a>
+          <div class="table-row" data-filterable-current=":image/staging" data-filterable-set=":image/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-26600741%2FFunctions%2F-1600758392"><span>unregister</span><wbr></wbr><span><span>UICreator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-26600741%2FFunctions%2F-1600758392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":image/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-26600741%2FFunctions%2F-1600758392"><span class="token function">unregisterUICreator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">uiCreator<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui/UICreator///PointingToDeclaration/">UICreator</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test/Result///PointingToDeclaration/">Result</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Powered by YumiMiyamoto</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
